@@ -11,6 +11,7 @@
     fd
     bat
     pandoc
+    rename
 
 #    pkgs-unstable.xwaylandvideobridge
     pkgs-unstable.hyprpicker
