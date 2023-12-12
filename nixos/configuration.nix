@@ -50,7 +50,11 @@ in
 
 
   sound.enable = false;
+
+  # Time
 #  time.timeZone = "Europe/Vienna";
+  time.hardwareClockInLocalTime = true;
+  services.automatic-timezoned.enable = true;
 
 
   i18n = {
@@ -132,8 +136,6 @@ in
   };
   
   services = {
-    automatic-timezoned.enable = true;
-
     xserver = {
       layout = "at";
       xkbVariant = "nodeadkeys";
