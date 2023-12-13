@@ -22,6 +22,7 @@
 
     vscode
     sqldeveloper
+    ciscoPacketTracer8
     androidStudioPackages.beta
     jetbrains.pycharm-professional
     jetbrains.rider
@@ -41,6 +42,7 @@
     (blender.override {
       cudaSupport = true;
     })
+
 
     cava
     hyfetch

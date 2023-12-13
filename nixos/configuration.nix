@@ -38,6 +38,7 @@ in
         useOSProber = true;
         device = "nodev";
         efiSupport = true;
+	default = "saved";
       };
     };
     
