@@ -20,7 +20,7 @@ in
       selection_background    = "#${colors.base03}";
       
       # Cursor colors
-      cursor                  = "#${colors.base03}";
+      cursor                  = "#${colors.base05}";
       cursor_text_color       = "#${colors.base00}";
       
       # URL underline color when hovering with mouse

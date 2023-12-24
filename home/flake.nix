@@ -36,6 +36,9 @@
         allowUnfree = true;
         allowUnfreePredicate = (_: true);
         android_sdk.accept_license = true;
+	permittedInsecurePackages = [
+          "electron-25.9.0"
+        ];
       };
     };
 
@@ -45,6 +48,9 @@
         allowUnfree = true;
         allowUnfreePredicate = (_: true);
         android_sdk.accept_license = true;
+	permittedInsecurePackages = [
+          "electron-25.9.0"
+        ];
       };
     };
 
@@ -54,6 +60,9 @@
         allowUnfree = true;
         allowUnfreePredicate = (_: true);
         android_sdk.accept_license = true;
+	permittedInsecurePackages = [
+          "electron-25.9.0"
+        ];
       };
     };
 
@@ -63,6 +72,9 @@
         allowUnfree = true;
         allowUnfreePredicate = (_: true);
         android_sdk.accept_license = true;
+	permittedInsecurePackages = [
+          "electron-25.9.0"
+        ];
       };
     };
   in

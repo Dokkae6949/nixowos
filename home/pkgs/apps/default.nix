@@ -27,22 +27,20 @@
     jetbrains.pycharm-professional
     jetbrains.rider
     jetbrains.clion
-    pkgs-unstable.jetbrains.idea-ultimate
-    pkgs-unstable.jetbrains.webstorm
-    pkgs-unstable.jetbrains.rust-rover
+
+    (pkgs-master.jetbrains.plugins.addPlugins pkgs-master.jetbrains.idea-ultimate [ "github-copilot" ])
+    (pkgs-master.jetbrains.plugins.addPlugins pkgs-master.jetbrains.webstorm [ "github-copilot" ])
+    (pkgs-master.jetbrains.plugins.addPlugins pkgs-master.jetbrains.rust-rover [ "github-copilot" ])
     
     picocom
     filezilla
     gamescope
 
     pkgs-master.godot_4
-    pkgs-unstable.reaper
-    pkgs-unstable.sonic-pi
     pkgs-unstable.aseprite
     (blender.override {
       cudaSupport = true;
     })
-
 
     cava
     hyfetch
