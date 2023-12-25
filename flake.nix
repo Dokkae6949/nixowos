@@ -2,21 +2,24 @@
 	description = "My super duper cute and awesome NixOwOs system flake >,<";
 
 	inputs = {
-		nixpkgs.url = "github:nixos/nixpkgs/nixos-23.11"
+		deprecated.url = "github:nixos/nixpkgs/nixos-23.05";
+		stable.url = "github:nixos/nixpkgs/nixos-23.11";
+		unstable.url = "github:nixos/nixpkgs/nixos-unstable";
+		master.url = "github:nixos/nixpkgs/master";
 
-		snowfall-lib = {
-			url = "github:snowfallorg/lib";
-			inputs.nixpkgs.follows = "nixpkgs";
-		};
+		home-manager.url = "github:nix-community/home-manager/release-23.11";
+    	home-manager.inputs.nixpkgs.follows = "stable";
+
+		snowfall-lib.url = "github:snowfallorg/lib";
+		snowfall-lib.inputs.nixpkgs.follows = "stable";
 	};
 
-	outputs = inputs: {
-		inputs.snowfall-lib.mkFlake {
+	outputs = inputs: let
+		lib = inputs.snowfall-lib.mkLib {
 			inherit inputs;
 			src = ./.;
 
 			snowfall = {
-				root = ./nix;
 				namespace = "nixowos";
 				meta = {
 					name = "nixowos";
@@ -24,5 +27,10 @@
 				};
 			};
 		};
-	};
+	in
+		lib.mkFlake {
+			channels-config = {
+				allowUnfree = true;
+			}
+		};
 }
