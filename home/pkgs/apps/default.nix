@@ -35,6 +35,7 @@
     picocom
     filezilla
     gamescope
+    heroic
 
     pkgs-master.godot_4
     pkgs-unstable.aseprite
