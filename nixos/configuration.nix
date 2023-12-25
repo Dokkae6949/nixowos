@@ -156,6 +156,7 @@ in
   services = {
     greetd = {
       enable = true;
+      vt = 6;
       settings = {
         default_session = {
           command = "${tuigreet} --time --remember --cmd Hyprland";
@@ -247,7 +248,7 @@ in
 	};
       };
 
-      package = config.boot.kernelPackages.nvidiaPackages.stable;
+      package = config.boot.kernelPackages.nvidiaPackages.production;
     };
   };
 
