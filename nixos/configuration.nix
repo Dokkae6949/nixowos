@@ -132,7 +132,7 @@ in
       lshw
 
       nvidia-offload
-      cudatoolkit
+#      cudatoolkit
 
       waybar
     ];
@@ -156,7 +156,7 @@ in
   services = {
     greetd = {
       enable = true;
-      vt = 6;
+      vt = 1;
       settings = {
         default_session = {
           command = "${tuigreet} --time --remember --cmd Hyprland";
