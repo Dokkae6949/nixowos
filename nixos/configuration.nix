@@ -102,9 +102,9 @@ in
       "pipewire/pipewire.conf.d/92-low-latency.conf".text = ''
         context.properties = {
           default.clock.rate = 48000
-          default.clock.quantum = 128
+          default.clock.quantum = 64
           default.clock.min-quantum = 32
-          default.clock.max-quantum = 256
+          default.clock.max-quantum = 512
 	  default.clock.allowed-rates = [ 44100 48000 ]
         }
       '';
