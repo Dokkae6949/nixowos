@@ -133,7 +133,7 @@ in
       lshw
 
       nvidia-offload
-#      cudatoolkit
+      cudatoolkit
 
       waybar
     ];
