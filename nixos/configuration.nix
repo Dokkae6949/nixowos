@@ -49,6 +49,8 @@ in
     extraModprobeConfig = ''
       options snd-intel-dspcfg dsp_driver=3
     '';
+
+    kernelPackages = pkgs.linuxPackages_zen;
   };
 
 
