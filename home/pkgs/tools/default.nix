@@ -3,6 +3,7 @@
 {
   imports = [
     ./git
+    ./neovim
   ];
 
   home.packages = with pkgs-stable; [
