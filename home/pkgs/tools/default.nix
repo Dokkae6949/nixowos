@@ -3,6 +3,7 @@
 {
   imports = [
     ./git
+    ./eza
     ./neovim
   ];
 
@@ -13,6 +14,8 @@
     scons
     bear
     gdb
+
+    eza
     
     rustup
     python3

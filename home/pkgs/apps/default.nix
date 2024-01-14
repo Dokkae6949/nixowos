@@ -20,6 +20,8 @@
     mpv
     tor-browser-bundle-bin
 
+    kicad
+
     vscode
     sqldeveloper
     ciscoPacketTracer8

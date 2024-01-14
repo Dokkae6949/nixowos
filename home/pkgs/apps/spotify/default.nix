@@ -14,7 +14,9 @@ in
       fullAppDisplay
       shuffle
       hidePodcasts
-      genre
+
+      # Not working anymore. https://github.com/Vexcited/better-spotify-genres seems to be the new replacement.
+      #genre
     ];
   };
 }
