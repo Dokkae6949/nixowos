@@ -15,8 +15,6 @@
     bear
     gdb
 
-    eza
-    
     rustup
     python3
     openjdk19
