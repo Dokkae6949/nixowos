@@ -136,6 +136,7 @@ in
 
       nvidia-offload
 #      cudatoolkit
+      ffmpeg-full
 
       waybar
     ];
@@ -195,6 +196,10 @@ in
     
     gnome.gnome-keyring.enable = true;
   };
+
+  # Virtualisation
+  virtualisation.libvirtd.enable = true;
+  programs.virt-manager.enable = true;
 
   programs = {
     hyprland = {
