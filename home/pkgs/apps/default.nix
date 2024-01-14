@@ -47,7 +47,5 @@
 
     cava
     hyfetch
-
-    wofi-emoji
   ];
 }
