@@ -261,7 +261,7 @@ in
 	};
       };
 
-      package = config.boot.kernelPackages.nvidiaPackages.vulkan_beta;
+      package = config.boot.kernelPackages.nvidiaPackages.latest;
     };
   };
 
