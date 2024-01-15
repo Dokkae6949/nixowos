@@ -200,6 +200,14 @@ in
     };
     
     gnome.gnome-keyring.enable = true;
+
+    printing.enable = true;
+
+    avahi = {
+      enable = true;
+      nssmdns = true;
+      openFirewall = true;
+    };
   };
 
   # Virtualisation
