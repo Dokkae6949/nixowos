@@ -22,6 +22,10 @@
       url = "github:the-argus/spicetify-nix";
     };
 
+    nix-vscode-extensions = {
+      url = "github:nix-community/nix-vscode-extensions";
+    };
+
     nix-colors.url = "github:misterio77/nix-colors";
   };
 
