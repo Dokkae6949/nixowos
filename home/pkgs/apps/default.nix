@@ -50,7 +50,7 @@
 
   programs.vscode = {
     enable = true;
-    extensions = with inputs.nix-vscode-extensions; [
+    extensions = with pkgs-stable.vscode-marketplace; [
       oracle.oracledevtools
     ];
   };
