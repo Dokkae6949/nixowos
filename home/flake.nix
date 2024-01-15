@@ -22,10 +22,6 @@
       url = "github:the-argus/spicetify-nix";
     };
 
-    nix-vscode-extensions = {
-      url = "github:nix-community/nix-vscode-extensions";
-    };
-
     nix-colors.url = "github:misterio77/nix-colors";
   };
 
@@ -34,12 +30,8 @@
     system = "x86_64-linux";
     username = "kurisu";
 
-    overlays = [
-      inputs.nix-vscode-extensions.overlays.default
-    ];
-
     pkgs-deprecated = import nixpkgs-deprecated {
-      inherit system overlays;
+      inherit system;
       config = {
         allowUnfree = true;
         allowUnfreePredicate = (_: true);
@@ -51,7 +43,7 @@
     };
 
     pkgs-stable = import nixpkgs-stable {
-      inherit system overlays;
+      inherit system;
       config = {
         allowUnfree = true;
         allowUnfreePredicate = (_: true);
@@ -63,7 +55,7 @@
     };
 
     pkgs-unstable = import nixpkgs-unstable {
-      inherit system overlays;
+      inherit system;
       config = {
         allowUnfree = true;
         allowUnfreePredicate = (_: true);
@@ -75,7 +67,7 @@
     };
 
     pkgs-master = import nixpkgs-master {
-      inherit system overlays;
+      inherit system;
       config = {
         allowUnfree = true;
         allowUnfreePredicate = (_: true);

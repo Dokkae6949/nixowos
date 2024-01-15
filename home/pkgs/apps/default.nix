@@ -22,6 +22,9 @@
 
     kicad
 
+    vscode
+    dotnet-runtime_7 # required for oracledevtools
+
     sqldeveloper
     ciscoPacketTracer8
     androidStudioPackages.beta
@@ -47,12 +50,4 @@
     cava
     hyfetch
   ];
-
-  programs.vscode = {
-    enable = true;
-    extensions = with pkgs-stable.vscode-marketplace; [
-#      oracle.oracledevtools
-      catppuccin.catppuccin-vsc
-    ];
-  };
 }
