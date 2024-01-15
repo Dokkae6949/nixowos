@@ -34,8 +34,12 @@
     system = "x86_64-linux";
     username = "kurisu";
 
+    overlays = [
+      inputs.nix-vscode-extensions.overlays.default
+    ];
+
     pkgs-deprecated = import nixpkgs-deprecated {
-      system = system;
+      inherit system overlays;
       config = {
         allowUnfree = true;
         allowUnfreePredicate = (_: true);
@@ -47,7 +51,7 @@
     };
 
     pkgs-stable = import nixpkgs-stable {
-      system = system;
+      inherit system overlays;
       config = {
         allowUnfree = true;
         allowUnfreePredicate = (_: true);
@@ -59,7 +63,7 @@
     };
 
     pkgs-unstable = import nixpkgs-unstable {
-      system = system;
+      inherit system overlays;
       config = {
         allowUnfree = true;
         allowUnfreePredicate = (_: true);
@@ -71,7 +75,7 @@
     };
 
     pkgs-master = import nixpkgs-master {
-      system = system;
+      inherit system overlays;
       config = {
         allowUnfree = true;
         allowUnfreePredicate = (_: true);
