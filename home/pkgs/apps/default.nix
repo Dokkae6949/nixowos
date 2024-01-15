@@ -1,4 +1,4 @@
-{config, pkgs-stable, pkgs-unstable, pkgs-master, ...}:
+{config, pkgs-stable, pkgs-unstable, pkgs-master, inputs, ...}:
 
 {
   imports = [
@@ -50,9 +50,8 @@
 
   programs.vscode = {
     enable = true;
-    extensions = with pkgs-stable.vscode-extensions; [
+    extensions = with inputs.nix-vscode-extensions; [
       oracle.oracledevtools
-      catppuccin.catppuccin-vcs
     ];
   };
 }
