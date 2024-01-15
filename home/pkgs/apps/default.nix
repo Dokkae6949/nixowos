@@ -51,7 +51,8 @@
   programs.vscode = {
     enable = true;
     extensions = with pkgs-stable.vscode-marketplace; [
-      oracle.oracledevtools
+#      oracle.oracledevtools
+      catppuccin.catppuccin-vsc
     ];
   };
 }
