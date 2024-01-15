@@ -22,7 +22,6 @@
 
     kicad
 
-    vscode
     sqldeveloper
     ciscoPacketTracer8
     androidStudioPackages.beta
@@ -48,4 +47,12 @@
     cava
     hyfetch
   ];
+
+  programs.vscode = {
+    enable = true;
+    extensions = with pkgs-stable.vscode-extensions; [
+      oracle.oracledevtools
+      catppuccin.catppuccin-vcs
+    ];
+  };
 }
