@@ -201,7 +201,12 @@ in
     
     gnome.gnome-keyring.enable = true;
 
-    printing.enable = true;
+    printing = {
+      enable = true;
+      drivers = with pkgs; [
+        cnijfilter2
+      ];
+    };
 
     avahi = {
       enable = true;
