@@ -23,6 +23,8 @@
     };
 
     nix-colors.url = "github:misterio77/nix-colors";
+    
+    ags.url = "github:Aylur/ags";
   };
 
   outputs = { home-manager, nixpkgs-deprecated, nixpkgs-stable, nixpkgs-unstable, nixpkgs-master, nix-colors, ... }@inputs:
