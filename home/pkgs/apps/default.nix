@@ -4,6 +4,7 @@
   imports = [
     ./terminals/kitty
     ./shells/fish
+    ./shells/ags
     ./communication/webcord
     ./communication/discord
     ./spotify
