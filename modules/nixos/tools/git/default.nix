@@ -19,11 +19,14 @@ in
     kmve.home.extraOptions = {
       programs.git = {
         enable = true;
+        
         inherit (cfg) userName userEmail;
+        
         lfs = enabled;
+        
         extraConfig = {
           init = { defaultBranch = "main"; };
-          pull = { rebase = true; };
+          pull = { rebase = false; };
           push = { autoSetupRemote = true; };
           core = { whitespace = "trailing-space,space-before-tab"; };
         };

@@ -46,41 +46,6 @@ in {
 
   config = {
     environment.systemPackages = [ propagatedIcon ];
-    programs.fish.enable = true;
-
-    kmve.home = {
-      file = {
-	".face".source = cfg.icon;
-        
-	"Desktop/.keep".text = "";
-        "Documents/.keep".text = "";
-        "Documents/Work/.keep".text = "";
-        "Documents/Personal/.keep".text = "";
-        "Downloads/.keep".text = "";
-        "Music/.keep".text = "";
-        "Pictures/.keep".text = "";
-        "Videos/.keep".text = "";
-        
-	"Pictures/${
-          cfg.icon.fileName or (builtins.baseNameOf cfg.icon)
-        }".source = cfg.icon;
-      };
-
-      extraOptions.programs = {
-        fish.enable = true;
-          
-	starship = {
-          enable = true;
-          settings = {
-            character = {
-              success_symbol = "[➜](bold green)";
-              error_symbol = "[✗](bold red) ";
-              vicmd_symbol = "[](bold blue) ";
-            };
-          };
-        };
-      };
-    };
 
     users.users.${cfg.name} = {
       isNormalUser = true;
@@ -89,7 +54,6 @@ in {
 
       home = "/home/${cfg.name}";
       group = "users";
-      shell = pkgs.fish;
 
       extraGroups = [] ++ cfg.extraGroups;
     } // cfg.extraOptions;

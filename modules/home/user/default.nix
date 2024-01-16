@@ -44,6 +44,23 @@ in
       home = {
         username = mkDefault cfg.name;
         homeDirectory = mkDefault cfg.home;
+
+        file = {
+          ".face".source = cfg.icon;
+                
+          "Desktop/.keep".text = "";
+          "Documents/.keep".text = "";
+          "Documents/Work/.keep".text = "";
+          "Documents/Personal/.keep".text = "";
+          "Downloads/.keep".text = "";
+          "Music/.keep".text = "";
+          "Pictures/.keep".text = "";
+          "Videos/.keep".text = "";
+          
+          "Pictures/${
+            cfg.icon.fileName or (builtins.baseNameOf cfg.icon)
+          }".source = cfg.icon;
+        };
       };
     }
   ]);

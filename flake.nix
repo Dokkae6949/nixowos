@@ -3,15 +3,15 @@
 
   inputs = {
     deprecated.url = "github:nixos/nixpkgs/nixos-23.05";
-    stable.url = "github:nixos/nixpkgs/nixos-23.11";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-23.11";
     unstable.url = "github:nixos/nixpkgs/nixos-unstable";
     master.url = "github:nixos/nixpkgs/master";
     
     snowfall-lib.url = "github:snowfallorg/lib";
-    snowfall-lib.inputs.nixpkgs.follows = "stable";
+    snowfall-lib.inputs.nixpkgs.follows = "nixpkgs";
     
     home-manager.url = "github:nix-community/home-manager/release-23.11";
-    home-manager.inputs.nixpkgs.follows = "stable";
+    home-manager.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs = inputs: 

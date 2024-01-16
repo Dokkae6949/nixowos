@@ -5,12 +5,19 @@ with lib.kmve;
   kmve = {
     user = {
       enable = true;
-      name = config.snowfallorg.user.name;
+      name = config.kmve.user.name;
     };
 
     apps = {
       home-manager = enabled;
-      neovim = enabled;
+
+      shells.fish = enabled;
+
+      neovim = {
+        enable = enabled;
+        aliases = true;
+        defaultEditor = true;
+      }
     };
 
     tools = {
