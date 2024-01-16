@@ -1,8 +1,8 @@
 { config, lib, pkgs, ... }:
 
+with lib;
+with lib.kmve;
 let
-  inherit (lib) mkEnableOption mkIf mkBoolOpt;
-
   cfg = config.kmve.apps.shells.fish;
 in
 {

@@ -1,7 +1,8 @@
 { lib, config, pkgs, ... }:
 
+with lib;
+with lib.kmve;
 let
-  inherit (lib) types mkEnableOption mkIf;
   cfg = config.kmve.tools.ssh;
 in
 {

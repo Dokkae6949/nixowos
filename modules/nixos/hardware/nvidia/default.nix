@@ -1,20 +1,34 @@
 { options, config, inputs, pkgs, lib, ... }:
 
 with lib;
+with lib.kmve;
 let
   cfg = config.kmve.hardware.nvidia;
 in
 {
   options.kmve.hardware.nvidia = with types; {
     enable = mkEnableOption "Nvidia support";
+    driver = mkOpt str "vulkan_beta" "The Nvidia driver to use.";
     prime = mkBoolOpt true "Whether or not to enable nvidia prime support.";
+    amdgpuBusId = mkOpt str "PCI:6:0:0" "The bus ID of the AMD GPU.";
+    nvidiaBusId = mkOpt str "PCI:1:0:0" "The bus ID of the Nvidia GPU.";
   };
 
   config = mkIf cfg.enable {
     # Load nvidia driver for Xorg and Wayland
-    services.xserver.videoDrivers = ["nvidia"];
+    services.xserver.videoDrivers = [ "nvidia" ];
     
-    hardware.opengl.enable = true;
+    hardware.opengl = {
+      enable = true;
+
+      driSupport = true;
+      driSupport32Bit = true;
+
+      extraPackages = with pkgs; [
+        vaapiVdpau
+        libvdpau-va-gl
+      ];
+    };
     
     hardware.nvidia = {
       # Modesetting is required.
@@ -40,16 +54,16 @@ in
       nvidiaSettings = true;
 
       # Optionally, you may need to select the appropriate driver version for your specific GPU.
-      package = config.boot.kernelPackages.nvidiaPackages.production;
+      package = config.boot.kernelPackages.nvidiaPackages.${cfg.driver};
 
       prime = {
-        amdgpuBusId = "PCI:6:0:0";
-	nvidiaBusId = "PCI:1:0:0";
+        amdgpuBusId = cfg.amdgpuBusId;
+	      nvidiaBusId = cfg.nvidiaBusId;
 
-	offload = {
+        offload = {
           enable = cfg.prime;
-	  enableOffloadCmd = true;
-	};
+          enableOffloadCmd = true;
+        };
       };
     };
 

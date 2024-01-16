@@ -2,7 +2,8 @@
 
 with lib;
 with lib.kmve;
-let cfg = config.kmve.system.locale;
+let 
+  cfg = config.kmve.system.locale;
 in
 {
   options.kmve.system.locale = with types; {

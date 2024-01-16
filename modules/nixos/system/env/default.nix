@@ -2,7 +2,8 @@
 
 with lib;
 with lib.kmve;
-let cfg = config.kmve.system.env;
+let 
+  cfg = config.kmve.system.env;
 in
 {
   options.kmve.system.env = with types;

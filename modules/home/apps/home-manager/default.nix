@@ -1,9 +1,8 @@
 { lib, config, ... }:
 
+with lib;
+with lib.kmve;
 let
-  inherit (lib) mkEnableOption mkIf;
-  inherit (lib.kmve) enabled;
-
   cfg = config.kmve.apps.home-manager;
 in
 {
@@ -12,6 +11,6 @@ in
   };
 
   config = mkIf cfg.enable {
-    programs.home-manager = enabled;
+    programs.home-manager.enable = true;
   };
 }

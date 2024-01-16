@@ -1,8 +1,8 @@
 { lib, config, ... }:
 
+with lib;
+with lib.kmve;
 let
-  inherit (lib) mkEnableOption mkIf mkBoolOpt;
-
   cfg = config.kmve.apps.neovim;
 in
 {

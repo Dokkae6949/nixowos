@@ -2,7 +2,8 @@
 
 with lib;
 with lib.kmve;
-let cfg = config.kmve.system.fonts;
+let 
+  cfg = config.kmve.system.fonts;
 in
 {
   options.kmve.system.fonts = with types; {

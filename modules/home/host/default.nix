@@ -1,11 +1,9 @@
 { lib, config, pkgs, host ? null, format ? "unknown", ... }:
 
-let
-  inherit (lib) types;
-  inherit (lib.kmve) mkOpt;
-in
+with lib;
+with lib.kmve;
 {
-  options.kmve.host = {
-    name = mkOpt (types.nullOr types.str) host "The host name.";
+  options.kmve.host = with types; {
+    name = mkOpt (nullOr str) host "The host name.";
   };
 }

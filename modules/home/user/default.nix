@@ -1,9 +1,8 @@
 { lib, config, pkgs, osConfig ? { }, ... }:
 
+with lib;
+with lib.kmve;
 let
-  inherit (lib) types mkIf mkDefault mkMerge;
-  inherit (lib.kmve) mkOpt;
-
   cfg = config.kmve.user;
 
   is-linux = pkgs.stdenv.isLinux;
@@ -18,14 +17,14 @@ let
       "/home/${cfg.name}";
 in
 {
-  options.kmve.user = {
-    enable = mkOpt types.bool false "Whether to configure the user account.";
-    name = mkOpt (types.nullOr types.str) config.snowfallorg.user.name "The user account.";
+  options.kmve.user = with types; {
+    enable = mkOpt bool false "Whether to configure the user account.";
+    name = mkOpt (nullOr str) config.kmve.user.name "The user account.";
 
-    fullName = mkOpt types.str "Finn Linck Ryan" "The full name of the user.";
-    email = mkOpt types.str "finnliry@gmail.com" "The email of the user.";
+    fullName = mkOpt str "Finn Linck Ryan" "The full name of the user.";
+    email = mkOpt str "finnliry@gmail.com" "The email of the user.";
 
-    home = mkOpt (types.nullOr types.str) home-directory "The user's home directory.";
+    home = mkOpt (nullOr str) home-directory "The user's home directory.";
   };
 
   config = mkIf cfg.enable (mkMerge [

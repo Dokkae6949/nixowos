@@ -1,17 +1,16 @@
 { lib, config, pkgs, ... }:
 
+with lib;
+with lib.kmve;
 let
-  inherit (lib) types mkEnableOption mkIf;
-  inherit (lib.kmve) mkOpt enabled;
-
   cfg = config.kmve.tools.git;
   user = config.kmve.user;
 in
 {
-  options.kmve.tools.git = {
+  options.kmve.tools.git = with types; {
     enable = mkEnableOption "Git";
-    userName = mkOpt types.str user.fullName "The name to configure git with.";
-    userEmail = mkOpt types.str user.email "The email to configure git with.";
+    userName = mkOpt str user.fullName "The name to configure git with.";
+    userEmail = mkOpt str user.email "The email to configure git with.";
   };
 
   config = mkIf cfg.enable {

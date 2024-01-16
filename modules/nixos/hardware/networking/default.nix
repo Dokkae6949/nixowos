@@ -2,7 +2,8 @@
 
 with lib;
 with lib.kmve;
-let cfg = config.kmve.hardware.networking;
+let 
+  cfg = config.kmve.hardware.networking;
 in
 {
   options.kmve.hardware.networking = with types; {

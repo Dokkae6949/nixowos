@@ -2,7 +2,8 @@
 
 with lib;
 with lib.kmve;
-let cfg = config.kmve.security.doas;
+let 
+  cfg = config.kmve.security.doas;
 in
 {
   options.kmve.security.doas = {

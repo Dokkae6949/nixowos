@@ -2,7 +2,8 @@
 
 with lib;
 with lib.kmve;
-let cfg = config.kmve.tools.direnv;
+let 
+  cfg = config.kmve.tools.direnv;
 in
 {
   options.kmve.tools.direnv = with types; {

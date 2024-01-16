@@ -2,7 +2,8 @@
 
 with lib;
 with lib.kmve;
-let cfg = config.kmve.system.time;
+let 
+  cfg = config.kmve.system.time;
 in
 {
   options.kmve.system.time = with types; {

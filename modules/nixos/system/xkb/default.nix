@@ -2,7 +2,8 @@
 
 with lib;
 with lib.kmve;
-let cfg = config.kmve.system.xkb;
+let 
+  cfg = config.kmve.system.xkb;
 in
 {
   options.kmve.system.xkb = with types; {
