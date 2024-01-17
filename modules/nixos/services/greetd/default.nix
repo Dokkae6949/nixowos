@@ -10,7 +10,7 @@ in
   options.kmve.services.greetd = with types; {
     enable = mkEnableOption "Enable greetd service.";
     vt = mkOpt int 1 "Virtual terminal to use.";
-    defaultSessionCommand = mkOpt str "${tuigreet} --time --remember --cmd Hyprland" "Command to run on default session.";
+    defaultSessionCommand = mkOpt str "" "Command to run on default session."; # ${tuigreet} --time --remember --cmd Hyprland
   };
 
   config = mkIf cfg.enable { 

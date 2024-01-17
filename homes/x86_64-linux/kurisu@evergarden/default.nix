@@ -14,10 +14,16 @@ with lib.kmve;
       shells.fish = enabled;
 
       neovim = {
-        enable = enabled;
+        enable = true;
         aliases = true;
         defaultEditor = true;
       }
+
+      spotify = enabled;
+    };
+
+    desktop = {
+      hyprland = disabled;
     };
 
     tools = {
