@@ -3,6 +3,7 @@
 {
   imports = [
     ./terminals/kitty
+#    ./mongodb
     ./shells/fish
     ./shells/ags
     ./communication/webcord
@@ -26,6 +27,9 @@
     vscode
     dotnet-runtime_7 # required for oracledevtools
 
+    pkgs-unstable.mongodb-compass
+    pkgs-unstable.mongosh
+    mongodb
     sqldeveloper
     ciscoPacketTracer8
     androidStudioPackages.beta

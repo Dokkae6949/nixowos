@@ -1,11 +1,10 @@
-{config, pkgs-stable, pkgs-unstable, ...}:
+{config, pkgs-stable, pkgs-unstable, pkgs-master, ...}:
 
 {
   imports = [];
 
-  home.packages = with pkgs-unstable; [
+  home.packages = with pkgs-master; [
     minecraft
     optifine
-    fabric-installer
   ];
 }
