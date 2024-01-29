@@ -3,7 +3,7 @@
 {
   imports = [
     ./terminals/kitty
-#    ./databases/mongodb
+    ./databases/mongodb
     ./shells/fish
     ./shells/ags
     ./communication/webcord
