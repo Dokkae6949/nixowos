@@ -3,10 +3,11 @@
 {
   imports = [
     ./terminals/kitty
+    ./databases/mongodb
     ./shells/fish
     ./shells/ags
     ./communication/webcord
-    ./communication/discord
+    ./communication/vesktop
     ./spotify
     ./zathura
   ];
