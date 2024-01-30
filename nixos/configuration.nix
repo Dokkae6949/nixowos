@@ -213,6 +213,10 @@ in
       nssmdns = true;
       openFirewall = true;
     };
+
+    mongodb = {
+      enable = true;
+    };
   };
 
   # Virtualisation
