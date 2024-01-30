@@ -4,6 +4,6 @@
   home.packages = with pkgs-unstable; [
     mongodb-compass
     mongosh
-    mongodb
+#    mongodb
   ];
 }
