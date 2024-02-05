@@ -4,7 +4,6 @@
   imports = [];
 
   home.packages = with pkgs-master; [
-    minecraft
-    optifine
+    prismlauncher
   ];
 }
