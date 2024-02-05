@@ -227,7 +227,7 @@ in
 
   # Virtualisation
   virtualisation.libvirtd.enable = true;
-  virtualisation.libvirtd.qemu.swtpm = true;
+  virtualisation.libvirtd.qemu.swtpm.enable = true;
   virtualisation.spiceUSBRedirection.enable = true;
   programs.virt-manager.enable = true;
 
