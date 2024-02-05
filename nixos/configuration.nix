@@ -138,8 +138,6 @@ in
       xdg-utils
       lshw
 
-      supergfxctl
-
       nvidia-offload
 #      cudatoolkit
       ffmpeg-full
@@ -164,6 +162,8 @@ in
   };
 
   services = {
+    supergfxd.enable = true;
+
     greetd = {
       enable = true;
       vt = 1;
