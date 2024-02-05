@@ -1,4 +1,4 @@
-{config, pkgs-stable, ...}:
+{config, pkgs-stable, pkgs-unstable, ...}:
 
 {
   programs = {
@@ -7,6 +7,9 @@
 
       shellAliases = {
         icat = "kitty icat";
+	f = "${pkgs-unstable.yazi}/bin/yazi";
+	vl = "fusermount -u ~/Vault";
+	vu = "${pkgs-stable.encfs}/bin/encfs ~/.Vault ~/Vault";
       };
 
       shellInit = ''
