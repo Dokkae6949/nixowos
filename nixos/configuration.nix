@@ -162,7 +162,13 @@ in
   };
 
   services = {
-    supergfxd.enable = true;
+    supergfxd = {
+      enable = true;
+      settings = {
+        vfio_enable = true;
+        vfio_save = true;
+      };
+    };
 
     greetd = {
       enable = false;
