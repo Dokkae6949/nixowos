@@ -165,7 +165,7 @@ in
     supergfxd.enable = true;
 
     greetd = {
-      enable = true;
+      enable = false;
       vt = 1;
       settings = {
         default_session = {
