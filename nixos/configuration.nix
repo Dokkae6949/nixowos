@@ -138,6 +138,8 @@ in
       xdg-utils
       lshw
 
+      supergfxctl
+
       nvidia-offload
 #      cudatoolkit
       ffmpeg-full
