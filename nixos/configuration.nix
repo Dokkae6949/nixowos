@@ -50,6 +50,10 @@ in
       options snd-intel-dspcfg dsp_driver=3
     '';
 
+    kernelParams = [
+      "amd_iommu=on"
+    ];
+
     kernelPackages = pkgs.linuxPackages_zen;
   };
 
@@ -221,6 +225,7 @@ in
 
   # Virtualisation
   virtualisation.libvirtd.enable = true;
+  virtualisation.spiceUSBRedirection.enable = true;
   programs.virt-manager.enable = true;
 
   programs = {
