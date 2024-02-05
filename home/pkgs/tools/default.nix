@@ -28,7 +28,10 @@
     unp
 
     gparted
+    encfs
     
     powershell
+    appimage-run
+    pkgs-unstable.yazi
   ];
 }
