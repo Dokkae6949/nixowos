@@ -1,7 +1,7 @@
 default partial alphanumeric_keys
 
 // overwrite some keys with the Mod-DH config
-xkb_symbols "colemak_dh" {
+xkb_symbols "dh" {
 	// get the base colemak layout
 	include "us(colemak)"
 	// use AltGr as a 3rd modifier

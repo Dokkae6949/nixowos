@@ -181,12 +181,12 @@ in
     '';
 
     xserver = {
-      layout = "at,colemak_dh";
+      layout = "at,dh";
       xkbVariant = "nodeadkeys";
       videoDrivers = ["nvidia"];
 
       extraLayouts = {
-        colemak_dh = {
+        dh = {
           description = "Colemak-DH";
           languages = ["eng"];
           symbolsFile = ./kbd_layouts/colemak_dh;
