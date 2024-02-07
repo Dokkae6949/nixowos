@@ -143,6 +143,8 @@ in
       ffmpeg-full
 
       waybar
+
+      spice-vdagent
     ];
   };
   
@@ -179,9 +181,17 @@ in
     '';
 
     xserver = {
-      layout = "at";
+      layout = "at,colemak_dh";
       xkbVariant = "nodeadkeys";
       videoDrivers = ["nvidia"];
+
+      extraLayouts = {
+        colemak_dh = {
+          description = "Colemak-DH";
+          languages = ["eng"];
+          symbolsFile = ./kbd_layouts/colemak_dh;
+	};
+      };
     };
   
     pipewire = {
@@ -228,6 +238,7 @@ in
   virtualisation.libvirtd.qemu.swtpm.enable = true;
   virtualisation.spiceUSBRedirection.enable = true;
   programs.virt-manager.enable = true;
+  services.spice-vdagentd.enable = true;
 
   programs = {
     hyprland = {
