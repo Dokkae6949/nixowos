@@ -6,7 +6,7 @@
     ./databases/mongodb
     ./shells/fish
     ./shells/ags
-    ./communication/webcord
+#    ./communication/webcord
     ./communication/vesktop
     ./spotify
     ./zathura
