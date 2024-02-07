@@ -28,7 +28,7 @@
     dotnet-runtime_7 # required for oracledevtools
 
 #    sqldeveloper
-#    ciscoPacketTracer8
+    ciscoPacketTracer8
     androidStudioPackages.beta
     jetbrains.pycharm-professional
     jetbrains.rider
