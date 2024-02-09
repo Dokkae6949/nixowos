@@ -1,4 +1,4 @@
-{ config, pkgs, lib, ... }:
+{ config, pkgs, pkgs-stable, pkgs-master, lib, ... }:
 
 let
   tuigreet = "${pkgs.greetd.tuigreet}/bin/tuigreet";
@@ -18,13 +18,12 @@ in
 
 
   nix = {
+    package = pkgs.nixFlakes;
+    
     settings = {
       experimental-features = [ "nix-command" "flakes" ];
       trusted-users = [ "root" "@wheel" ];
     };
-
-    
-    package = pkgs.nixFlakes;
     extraOptions = ''
       experimental-features = nix-command flakes
     '';
@@ -181,17 +180,19 @@ in
     '';
 
     xserver = {
-      layout = "at,dh";
-      xkbOptions = "terminate:ctrl_alt_bksp";
-      videoDrivers = ["nvidia"];
-
-      extraLayouts = {
-        dh = {
-          description = "Colemak-DH ergo";
-          languages = ["eng"];
-          symbolsFile = ./kbd_layouts/colemak_dh;
-	};
+      xkb = {
+        layout = "at,dh";
+        options = "terminate:ctrl_alt_bksp";
+        extraLayouts = {
+          dh = {
+            description = "Colemak-DH ergo";
+            languages = ["eng"];
+            symbolsFile = ./kbd_layouts/colemak_dh;
+	  };
+        };
       };
+
+      videoDrivers = ["nvidia"];
     };
   
     pipewire = {
@@ -201,7 +202,7 @@ in
       pulse.enable = true;
       jack.enable = true;
       wireplumber.enable = true;
-
+      
       alsa = {
         enable = true;
         support32Bit = true;
@@ -224,12 +225,13 @@ in
 
     avahi = {
       enable = true;
-      nssmdns = true;
+      nssmdns4 = true;
       openFirewall = true;
     };
 
     mongodb = {
       enable = true;
+      package = pkgs-stable.mongodb;
     };
   };
 
@@ -243,7 +245,6 @@ in
   programs = {
     hyprland = {
       enable = true;
-      enableNvidiaPatches = true;
       xwayland.enable = true;
     };
 
@@ -259,6 +260,11 @@ in
       enable = true;
       remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
       dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
+    };
+
+    alvr = {
+      enable = true;
+      openFirewall = true;
     };
   };
 
@@ -310,14 +316,16 @@ in
     networkmanager.enable = true;
 
 #    interfaces = {
-#      eno1.ipv4.addresses = [{
-#        address = "192.168.0.34";
-#	prefixLength = 27;
-#      }];
+#      eno1.ipv4.addresses = [
+#        {
+#          address = "192.168.10.4";
+#	  prefixLength = 24;
+#	}
+#      ];
 #    };
 #    
 #    defaultGateway = {
-#      address = "192.168.0.33";
+#      address = "192.168.10.1";
 #      interface = "eno1";
 #    };
 
