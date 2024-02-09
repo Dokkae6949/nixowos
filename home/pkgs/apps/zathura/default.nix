@@ -1,7 +1,7 @@
 {config, pkgs-stable, pkgs-unstable, ...}:
 
 let
-  colors = config.colorScheme.colors;
+  colors = config.colorScheme.palette;
 in
 {
   programs = {

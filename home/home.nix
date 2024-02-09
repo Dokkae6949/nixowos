@@ -15,7 +15,7 @@ in
     slug = "catppuccin-mocha-24";
     name = "Catppuccin Mocha 24";
     author = "Kiara Grouwstra (https://github.com/KiaraGrouwstra)";
-    colors = {
+    palette = {
       base00 = "1e1e2e"; # base
       base01 = "181825"; # mantle
       base02 = "313244"; # surface0
