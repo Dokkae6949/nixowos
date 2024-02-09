@@ -19,8 +19,9 @@
     onlyoffice-bin
     pkgs-unstable.obsidian
     obs-studio
-    mpv
+    pkgs-unstable.mpv
     tor-browser-bundle-bin
+    pkgs-unstable.ani-cli
 
     kicad
 
@@ -44,7 +45,7 @@
     heroic
 
     pkgs-master.godot_4
-    pkgs-unstable.aseprite
+#    pkgs-master.aseprite
     (blender.override {
       cudaSupport = true;
     })
