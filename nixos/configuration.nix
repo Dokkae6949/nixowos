@@ -109,7 +109,7 @@ in
           default.clock.rate = 48000
           default.clock.quantum = 64
           default.clock.min-quantum = 32
-          default.clock.max-quantum = 512
+          default.clock.max-quantum = 1024
 	  default.clock.allowed-rates = [ 44100 48000 ]
         }
       '';
@@ -138,7 +138,7 @@ in
       lshw
 
       nvidia-offload
-#      cudatoolkit
+      cudatoolkit
       ffmpeg-full
 
       waybar
