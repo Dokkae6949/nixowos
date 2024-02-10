@@ -43,6 +43,7 @@
     filezilla
     gamescope
     heroic
+    wireshark
 
     pkgs-master.godot_4
 #    pkgs-master.aseprite
