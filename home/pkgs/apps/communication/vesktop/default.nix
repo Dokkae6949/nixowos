@@ -1,7 +1,7 @@
-{ config, pkgs-unstable, ... }:
+{ config, pkgs-unstable, pkgs-stable, ... }:
 
 {
-  home.packages = with pkgs-unstable; [
+  home.packages = with pkgs-stable; [
     vesktop
   ];
 }

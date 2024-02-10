@@ -29,6 +29,10 @@
 
     gparted
     encfs
+    pwntools
+    nmap
+    exif
+    hexedit
     
     powershell
     appimage-run
