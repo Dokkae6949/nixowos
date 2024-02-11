@@ -33,6 +33,7 @@
     nmap
     exif
     hexedit
+    traceroute
     
     powershell
     appimage-run
