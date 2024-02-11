@@ -87,7 +87,7 @@ in
   users.users.kurisu = {
     isNormalUser = true;
     description = "Kurisu Evergarden";
-    extraGroups = [ "networkmanager" "wheel" "audio" "plugdev" "adbusers" "libvirtd" ];
+    extraGroups = [ "networkmanager" "wheel" "audio" "plugdev" "adbusers" "libvirtd" "wireshark" ];
     packages = with pkgs; [];
     shell = pkgs.fish;
   };
@@ -265,6 +265,11 @@ in
     alvr = {
       enable = true;
       openFirewall = true;
+    };
+
+    wireshark = {
+      enable = true;
+      package = pkgs.wireshark;
     };
   };
 
