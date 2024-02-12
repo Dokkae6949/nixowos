@@ -34,6 +34,7 @@
     exif
     hexedit
     traceroute
+    insomnia
     
     powershell
     appimage-run
