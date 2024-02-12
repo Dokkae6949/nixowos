@@ -1,12 +1,12 @@
 { options, config, pkgs, lib, ... }:
 
 with lib;
-with lib.kmve;
+with lib.nixowos;
 let 
-  cfg = config.kmve.security.doas;
+  cfg = config.nixowos.security.doas;
 in
 {
-  options.kmve.security.doas = {
+  options.nixowos.security.doas = {
     enable = mkBoolOpt false "Whether or not to replace sudo with doas.";
   };
 
@@ -16,7 +16,7 @@ in
     security.doas = {
       enable = true;
       extraRules = [{
-        users = [ config.kmve.user.name ];
+        users = [ config.nixowos.user.name ];
         noPass = true;
         keepEnv = true;
       }];

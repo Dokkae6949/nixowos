@@ -1,11 +1,11 @@
 { lib, pkgs, config, osConfig ? { }, format ? "unknown", ... }:
 
-with lib.kmve;
+with lib.nixowos;
 {
-  kmve = {
+  nixowos = {
     user = {
       enable = true;
-      name = config.kmve.user.name;
+      name = config.nixowos.user.name;
     };
 
     apps = {
@@ -22,7 +22,7 @@ with lib.kmve;
       spotify = enabled;
     };
 
-    desktop = {
+    desktops = {
       hyprland = disabled;
     };
 

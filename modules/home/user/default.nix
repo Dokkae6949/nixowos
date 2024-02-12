@@ -1,9 +1,9 @@
 { lib, config, pkgs, osConfig ? { }, ... }:
 
 with lib;
-with lib.kmve;
+with lib.nixowos;
 let
-  cfg = config.kmve.user;
+  cfg = config.nixowos.user;
 
   is-linux = pkgs.stdenv.isLinux;
   is-darwin = pkgs.stdenv.isDarwin;
@@ -17,9 +17,9 @@ let
       "/home/${cfg.name}";
 in
 {
-  options.kmve.user = with types; {
+  options.nixowos.user = with types; {
     enable = mkOpt bool false "Whether to configure the user account.";
-    name = mkOpt (nullOr str) config.kmve.user.name "The user account.";
+    name = mkOpt (nullOr str) config.nixowos.user.name "The user account.";
 
     fullName = mkOpt str "Finn Linck Ryan" "The full name of the user.";
     email = mkOpt str "finnliry@gmail.com" "The email of the user.";
@@ -32,11 +32,11 @@ in
       assertions = [
         {
           assertion = cfg.name != null;
-          message = "kmve.user.name must be set";
+          message = "nixowos.user.name must be set";
         }
         {
           assertion = cfg.home != null;
-          message = "kmve.user.home must be set";
+          message = "nixowos.user.home must be set";
         }
       ];
 

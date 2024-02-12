@@ -1,12 +1,12 @@
 { lib, config, ... }:
 
 with lib;
-with lib.kmve;
+with lib.nixowos;
 let
-  cfg = config.kmve.apps.eza;
+  cfg = config.nixowos.apps.eza;
 in
 {
-  options.kmve.apps.eza = {
+  options.nixowos.apps.eza = {
     enable = mkEnableOption "Eza";
     aliases = mkBoolOpt false "Whether or not to enable l, ll, la, lla aliases.";
   };

@@ -1,12 +1,12 @@
 { lib, config, ... }:
 
 with lib;
-with lib.kmve;
+with lib.nixowos;
 let
-  cfg = config.kmve.apps.shells.fish;
+  cfg = config.nixowos.apps.shells.fish;
 in
 {
-  options.kmve.apps.shells.fish = {
+  options.nixowos.apps.shells.fish = {
     enable = mkEnableOption "Fish";
     starship = mkBoolOpt true "Enable starship prompt.";
   };

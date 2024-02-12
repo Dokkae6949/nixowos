@@ -1,12 +1,12 @@
 { options, config, pkgs, lib, ... }:
 
 with lib;
-with lib.kmve;
+with lib.nixowos;
 let 
-  cfg = config.kmve.system.locale;
+  cfg = config.nixowos.system.locale;
 in
 {
-  options.kmve.system.locale = with types; {
+  options.nixowos.system.locale = with types; {
     enable = mkBoolOpt false "Whether or not to manage locale settings.";
   };
 

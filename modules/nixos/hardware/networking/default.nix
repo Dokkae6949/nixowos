@@ -1,29 +1,21 @@
 { options, config, pkgs, lib, ... }:
 
 with lib;
-with lib.kmve;
+with lib.nixowos;
 let 
-  cfg = config.kmve.hardware.networking;
+  cfg = config.nixowos.hardware.networking;
 in
 {
-  options.kmve.hardware.networking = with types; {
+  options.nixowos.hardware.networking = with types; {
     enable = mkBoolOpt false "Whether or not to enable networking support";
-    hosts = mkOpt attrs { }
-      (mdDoc "An attribute set to merge with `networking.hosts`");
+    extraOptions = mkOpt attrs {} (mdDoc "Extra options passed to `networking`.");
   };
 
   config = mkIf cfg.enable {
-    kmve.user.extraGroups = [ "networkmanager" ];
+    nixowos.user.extraGroups = [ "networkmanager" ];
 
     networking = {
-      hosts = {
-        "127.0.0.1" = [ "local.test" ] ++ (cfg.hosts."127.0.0.1" or [ ]);
-      } // cfg.hosts;
-
-      networkmanager = {
-        enable = true;
-        dhcp = "internal";
-      };
+      networkmanager = enabled;
 
       # interfaces = {
       #   eno1.ipv4.addresses = [{
@@ -36,7 +28,7 @@ in
       #   address = "192.168.0.33";
       #   interface = "eno1";
       # };
-    };
+    } // cfg.extraOptions;
 
     # Fixes an issue that normally causes nixos-rebuild to fail.
     # https://github.com/NixOS/nixpkgs/issues/180175

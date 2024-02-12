@@ -1,9 +1,9 @@
 { options, config, pkgs, lib, inputs, ... }:
 
 with lib;
-with lib.kmve;
+with lib.nixowos;
 let
-  cfg = config.kmve.nix;
+  cfg = config.nixowos.nix;
 
   substituters-submodule = types.submodule ({ name, ... }: {
     options = with types; {
@@ -12,7 +12,7 @@ let
   });
 in
 {
-  options.kmve.nix = with types; {
+  options.nixowos.nix = with types; {
     enable = mkBoolOpt true "Whether or not to manage nix configuration.";
     package = mkOpt package pkgs.nixUnstable "Which nix package to use.";
 
@@ -28,13 +28,13 @@ in
     assertions = mapAttrsToList
       (name: value: {
         assertion = value.key != null;
-        message = "kmve.nix.extra-substituters.${name}.key must be set";
+        message = "nixowos.nix.extra-substituters.${name}.key must be set";
       })
       cfg.extra-substituters;
 
     environment.systemPackages = with pkgs; [
-      kmve.nixos-revision
-      (kmve.nixos-hosts.override {
+      nixowos.nixos-revision
+      (nixowos.nixos-hosts.override {
         hosts = inputs.self.nixosConfigurations;
       })
       deploy-rs
@@ -46,7 +46,7 @@ in
     ];
 
     nix =
-      let users = [ "root" config.kmve.user.name ] ++
+      let users = [ "root" config.nixowos.user.name ] ++
         optional config.services.hydra.enable "hydra";
       in
       {
@@ -71,7 +71,7 @@ in
               ++
               (mapAttrsToList (name: value: value.key) cfg.extra-substituters);
 
-        } // (lib.optionalAttrs config.kmve.tools.direnv.enable {
+        } // (lib.optionalAttrs config.nixowos.tools.direnv.enable {
           keep-outputs = true;
           keep-derivations = true;
         });

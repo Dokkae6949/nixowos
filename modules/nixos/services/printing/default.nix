@@ -1,17 +1,17 @@
 { options, config, pkgs, lib, ... }:
 
 with lib;
-with lib.kmve;
+with lib.nixowos;
 let
-  cfg = config.kmve.services.printing;
+  cfg = config.nixowos.services.printing;
 in
 {
-  options.kmve.services.printing = with types; {
+  options.nixowos.services.printing = with types; {
     enable = mkEnableOption "Whether or not to configure printing support.";
-    drivers = mkOption { "List of drivers to install for printing support."
+    drivers = mkOption { 
       type = types.listOf types.package;
       default = [];
-      description = ;
+      description = "List of drivers to install for printing support.";
     };
   };
 
@@ -19,9 +19,7 @@ in
     services = {
       printing = {
         enable = true;
-        drivers = with pkgs; [
-          cnijfilter2
-        ] ++ cfg.drivers;
+        drivers = with pkgs; [ ] ++ cfg.drivers;
       };
 
       avahi = {

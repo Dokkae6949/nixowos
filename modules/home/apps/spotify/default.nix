@@ -1,13 +1,13 @@
 { lib, config, inputs, ... }:
 
 with lib;
-with lib.kmve;
+with lib.nixowos;
 let
-  cfg = config.kmve.apps.spotify;
+  cfg = config.nixowos.apps.spotify;
   spicePkgs = inputs.spicetify-nix.packages.${pkgs.system}.default;
 in
 {
-  options.kmve.apps.spotify = {
+  options.nixowos.apps.spotify = {
     enable = mkEnableOption "Spotify";
   };
 

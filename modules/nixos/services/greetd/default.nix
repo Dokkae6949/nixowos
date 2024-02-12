@@ -1,16 +1,15 @@
 { options, config, pkgs, lib, ... }:
 
 with lib;
-with lib.kmve;
+with lib.nixowos;
 let 
-  cfg = config.kmve.services.greetd;
-  tuigreet = "${pkgs.greetd.tuigreet}/bin/tuigreet";
+  cfg = config.nixowos.services.greetd;
 in
 {
-  options.kmve.services.greetd = with types; {
+  options.nixowos.services.greetd = with types; {
     enable = mkEnableOption "Enable greetd service.";
     vt = mkOpt int 1 "Virtual terminal to use.";
-    defaultSessionCommand = mkOpt str "" "Command to run on default session."; # ${tuigreet} --time --remember --cmd Hyprland
+    defaultSessionCommand = mkOpt str "" "Command to run on default session.";
   };
 
   config = mkIf cfg.enable { 

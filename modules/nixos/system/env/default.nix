@@ -1,12 +1,12 @@
 { options, config, pkgs, lib, ... }:
 
 with lib;
-with lib.kmve;
+with lib.nixowos;
 let 
-  cfg = config.kmve.system.env;
+  cfg = config.nixowos.system.env;
 in
 {
-  options.kmve.system.env = with types;
+  options.nixowos.system.env = with types;
     mkOption {
       type = attrsOf (oneOf [ str path (listOf (either str path)) ]);
       apply = mapAttrs (n: v:

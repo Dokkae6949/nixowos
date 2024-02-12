@@ -1,12 +1,12 @@
 { lib, config, ... }:
 
 with lib;
-with lib.kmve;
+with lib.nixowos;
 let
-  cfg = config.kmve.apps.neovim;
+  cfg = config.nixowos.apps.neovim;
 in
 {
-  options.kmve.apps.neovim = {
+  options.nixowos.apps.neovim = {
     enable = mkEnableOption "Neovim";
     aliases = mkBoolOpt false "Whether or not to enable vi and vim aliases.";
     defaultEditor = mkBoolOpt false "Whether or not to set neovim as the default editor.";

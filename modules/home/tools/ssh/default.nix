@@ -1,12 +1,12 @@
 { lib, config, pkgs, ... }:
 
 with lib;
-with lib.kmve;
+with lib.nixowos;
 let
-  cfg = config.kmve.tools.ssh;
+  cfg = config.nixowos.tools.ssh;
 in
 {
-  options.kmve.tools.ssh = {
+  options.nixowos.tools.ssh = {
     enable = mkEnableOption "SSH";
   };
 

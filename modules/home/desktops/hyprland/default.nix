@@ -1,12 +1,12 @@
 { lib, config, ... }:
 
 with lib;
-with lib.kmve;
+with lib.nixowos;
 let
-  cfg = config.kmve.desktop.hyprland;
+  cfg = config.nixowos.desktops.hyprland;
 in
 {
-  options.kmve.desktop.hyprland = {
+  options.nixowos.desktops.hyprland = {
     enable = mkEnableOption "Hyprland";
   };
 

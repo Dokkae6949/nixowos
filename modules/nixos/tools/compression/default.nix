@@ -1,12 +1,12 @@
 { config, lib, pkgs, ... }:
 
 with lib;
-with lib.kmve;
+with lib.nixowos;
 let 
-  cfg = config.kmve.tools.compression;
+  cfg = config.nixowos.tools.compression;
 in
 {
-  options.kmve.tools.compression = with types; {
+  options.nixowos.tools.compression = with types; {
     enable = mkBoolOpt false "Various file compression programms";
   };
 

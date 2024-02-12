@@ -1,12 +1,12 @@
 { lib, config, ... }:
 
 with lib;
-with lib.kmve;
+with lib.nixowos;
 let
-  cfg = config.kmve.apps.home-manager;
+  cfg = config.nixowos.apps.home-manager;
 in
 {
-  options.kmve.apps.home-manager = {
+  options.nixowos.apps.home-manager = {
     enable = mkEnableOption "home-manager";
   };
 

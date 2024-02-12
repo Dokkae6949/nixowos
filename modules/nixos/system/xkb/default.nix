@@ -1,20 +1,30 @@
 { options, config, lib, ... }:
 
 with lib;
-with lib.kmve;
+with lib.nixowos;
 let 
-  cfg = config.kmve.system.xkb;
+  cfg = config.nixowos.system.xkb;
 in
 {
-  options.kmve.system.xkb = with types; {
+  options.nixowos.system.xkb = with types; {
     enable = mkBoolOpt false "Whether or not to configure xkb.";
+    layout = mkOpt str "at" "The keyboard layout to use.";
   };
 
   config = mkIf cfg.enable {
     console.useXkbConfig = true;
     services.xserver = {
-      layout = "us";
-      xkbOptions = "caps:escape";
+      xkb = {
+        layout = cfg.layout;
+        options = "caps:escape";
+
+        extraLayouts = {
+          dh = {
+            description = "Colemak-DH ergo";
+            languages = ["eng"];
+            symbolsFile = ./layouts/colemak_dh;
+	  };
+	};
     };
   };
 }

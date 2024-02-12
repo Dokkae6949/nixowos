@@ -1,12 +1,12 @@
 { options, config, inputs, pkgs, lib, ... }:
 
 with lib;
-with lib.kmve;
+with lib.nixowos;
 let
-  cfg = config.kmve.hardware.nvidia;
+  cfg = config.nixowos.hardware.nvidia;
 in
 {
-  options.kmve.hardware.nvidia = with types; {
+  options.nixowos.hardware.nvidia = with types; {
     enable = mkEnableOption "Nvidia support";
     driver = mkOpt str "vulkan_beta" "The Nvidia driver to use.";
     prime = mkBoolOpt true "Whether or not to enable nvidia prime support.";
@@ -58,7 +58,7 @@ in
 
       prime = {
         amdgpuBusId = cfg.amdgpuBusId;
-	      nvidiaBusId = cfg.nvidiaBusId;
+	nvidiaBusId = cfg.nvidiaBusId;
 
         offload = {
           enable = cfg.prime;
@@ -67,7 +67,7 @@ in
       };
     };
 
-    environment.systemPackages = mkIf cfg.prime [ pkgs.kmve.nvidia-offload ];
+    environment.systemPackages = mkIf cfg.prime [ pkgs.nixowos.nvidia-offload ];
   };
 }
 

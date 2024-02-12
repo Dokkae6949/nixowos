@@ -1,12 +1,12 @@
 { options, config, lib, pkgs, ... }:
 
 with lib;
-with lib.kmve;
+with lib.nixowos;
 let 
-  cfg = config.kmve.tools.direnv;
+  cfg = config.nixowos.tools.direnv;
 in
 {
-  options.kmve.tools.direnv = with types; {
+  options.nixowos.tools.direnv = with types; {
     enable = mkEnableOption "Whether or not to enable direnv.";
   };
 

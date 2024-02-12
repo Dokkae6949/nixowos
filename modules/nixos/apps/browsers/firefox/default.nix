@@ -1,12 +1,12 @@
 { config, lib, pkgs, ... }:
 
 with lib;
-with lib.kmve;
+with lib.nixowos;
 let
-  cfg = config.kmve.apps.browsers.firefox;
+  cfg = config.nixowos.apps.browsers.firefox;
 in
 {
-  options.kmve.apps.browsers.firefox = {
+  options.nixowos.apps.browsers.firefox = {
     
   };
 }

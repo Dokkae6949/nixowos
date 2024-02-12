@@ -1,10 +1,10 @@
 { options, config, pkgs, lib, ... }:
 
 with lib;
-with lib.kmve; let
-  cfg = config.kmve.system.boot.grub;
+with lib.nixowos; let
+  cfg = config.nixowos.system.boot.grub;
 in {
-  options.kmve.system.boot.grub = with types; {
+  options.nixowos.system.boot.grub = with types; {
     enable = mkBoolOpt false "Whether or not to enable grub booting.";
     kernelPackages = mkOpt package pkgs.linuxPackages_zen "The kernel package to use for grub.";
   };

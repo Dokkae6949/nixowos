@@ -1,13 +1,13 @@
 { lib, config, pkgs, ... }:
 
 with lib;
-with lib.kmve;
+with lib.nixowos;
 let
-  cfg = config.kmve.tools.git;
-  user = config.kmve.user;
+  cfg = config.nixowos.tools.git;
+  user = config.nixowos.user;
 in
 {
-  options.kmve.tools.git = with types; {
+  options.nixowos.tools.git = with types; {
     enable = mkEnableOption "Git";
     userName = mkOpt str user.fullName "The name to configure git with.";
     userEmail = mkOpt str user.email "The email to configure git with.";

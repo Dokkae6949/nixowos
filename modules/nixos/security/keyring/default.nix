@@ -1,12 +1,12 @@
 { options, config, lib, pkgs, ... }:
 
 with lib;
-with lib.kmve;
+with lib.nixowos;
 let
-  cfg = config.kmve.security.keyring;
+  cfg = config.nixowos.security.keyring;
 in
 {
-  options.kmve.security.keyring = with types; {
+  options.nixowos.security.keyring = with types; {
     enable = mkBoolOpt false "Whether to enable gnome keyring.";
   };
 

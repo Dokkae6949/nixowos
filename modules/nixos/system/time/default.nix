@@ -1,12 +1,12 @@
 { options, config, pkgs, lib, ... }:
 
 with lib;
-with lib.kmve;
+with lib.nixowos;
 let 
-  cfg = config.kmve.system.time;
+  cfg = config.nixowos.system.time;
 in
 {
-  options.kmve.system.time = with types; {
+  options.nixowos.system.time = with types; {
     enable = mkBoolOpt false "Whether or not to configure timezone information.";
     timezone = mkOpt str "Europe/Vienna" "The timezon to use if automatic-timezon is disabled.";
     automatic-timezone = mkBoolOpt true "Whether or not to configure the timezone automatically";

@@ -1,12 +1,12 @@
 { options, config, pkgs, lib, ... }:
 
 with lib;
-with lib.kmve;
+with lib.nixowos;
 let 
-  cfg = config.kmve.system.fonts;
+  cfg = config.nixowos.system.fonts;
 in
 {
-  options.kmve.system.fonts = with types; {
+  options.nixowos.system.fonts = with types; {
     enable = mkBoolOpt false "Whether or not to manage fonts.";
     enableFontManager = mkBoolOpt true "Whether or not to enable a GUI font manager.";
     fonts = mkOpt (listOf package) [ ] "Custom font packages to install.";
