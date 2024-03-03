@@ -179,6 +179,8 @@ in
       HandlePowerKey=ignore
     '';
 
+    blueman.enable = true;
+
     xserver = {
       xkb = {
         layout = "at,dh";
@@ -292,6 +294,11 @@ in
       ];
     };
 
+    bluetooth = {
+      enable = true;
+      powerOnBoot = true;
+    };
+
     nvidia = {
       modesetting.enable = true;
       powerManagement.enable = false;
@@ -311,7 +318,7 @@ in
 	};
       };
 
-      package = config.boot.kernelPackages.nvidiaPackages.vulkan_beta;
+      package = config.boot.kernelPackages.nvidiaPackages.beta;
     };
   };
 
