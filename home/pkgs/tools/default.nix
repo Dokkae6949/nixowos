@@ -39,5 +39,6 @@
     powershell
     appimage-run
     pkgs-unstable.yazi
+    grimblast
   ];
 }

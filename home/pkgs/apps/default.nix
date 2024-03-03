@@ -34,7 +34,7 @@
     jetbrains.pycharm-professional
     jetbrains.rider
     jetbrains.clion
-
+    pkgs-master.jetbrains.gateway
     (pkgs-master.jetbrains.plugins.addPlugins pkgs-master.jetbrains.idea-ultimate [ "github-copilot" ])
     (pkgs-master.jetbrains.plugins.addPlugins pkgs-master.jetbrains.webstorm [ "github-copilot" ])
     (pkgs-master.jetbrains.plugins.addPlugins pkgs-master.jetbrains.rust-rover [ "github-copilot" ])
