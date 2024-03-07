@@ -103,18 +103,6 @@ in
       NIXOS_OZONE_WL = "1";
     };
 
-    etc = {
-      "pipewire/pipewire.conf.d/92-low-latency.conf".text = ''
-        context.properties = {
-          default.clock.rate = 48000
-          default.clock.quantum = 64
-          default.clock.min-quantum = 32
-          default.clock.max-quantum = 1024
-	  default.clock.allowed-rates = [ 44100 48000 ]
-        }
-      '';
-    };
-
     systemPackages = with pkgs; [
       neovim
     
@@ -208,7 +196,17 @@ in
       alsa = {
         enable = true;
         support32Bit = true;
-      };  
+      };
+
+      extraConfig.pipewire."92-low-latency" = {
+        context.properties = {
+          default.clock.rate = 48000;
+          default.clock.quantum = 64;
+          default.clock.min-quantum = 32;
+          default.clock.max-quantum = 1024;
+	  default.clock.allowed-rates = [ 44100 48000 ];
+        };
+      };
     };
 
     passSecretService = {
@@ -222,6 +220,11 @@ in
       enable = true;
       drivers = with pkgs; [
         cnijfilter2
+	#samsung-unified-linux-driver
+	samsung-unified-linux-driver_1_00_37
+	gutenprint
+	gutenprintBin
+	splix
       ];
     };
 

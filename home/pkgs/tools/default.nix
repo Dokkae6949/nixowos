@@ -16,6 +16,9 @@
     gdb
 
     rustup
+    openssl
+    pkg-config
+
     python3
     openjdk19
     nodejs_18
@@ -28,6 +31,7 @@
     unp
 
     gparted
+    pkgs-unstable.postman
     encfs
     pwntools
     nmap
