@@ -37,8 +37,8 @@
     nmap
     exif
     hexedit
-    traceroute
-    insomnia
+    pkgs-unstable.insomnia
+    burpsuite
     
     powershell
     appimage-run

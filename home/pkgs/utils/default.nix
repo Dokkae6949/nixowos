@@ -13,10 +13,9 @@
     pandoc
     rename
     wget
+    inetutils
 
 #    pkgs-unstable.xwaylandvideobridge
     pkgs-unstable.hyprpicker
-
-    tftp-hpa
   ];
 }
