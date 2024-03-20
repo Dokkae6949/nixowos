@@ -1,4 +1,4 @@
-{ config, pkgs, pkgs-stable, pkgs-master, lib, ... }:
+{ inputs, config, pkgs, pkgs-stable, pkgs-master, lib, ... }:
 
 let
   tuigreet = "${pkgs.greetd.tuigreet}/bin/tuigreet";
@@ -10,6 +10,8 @@ let
     export __VK_LAYER_NV_optimus=NVIDIA_only
     exec "$@"
   '';
+
+  pkgs-hyprland = inputs.hyprland.inputs.nixpkgs.legacyPackages.${pkgs.stdenv.hostPlatform.system};
 in 
 {
   imports = [ 
@@ -23,6 +25,8 @@ in
     settings = {
       experimental-features = [ "nix-command" "flakes" ];
       trusted-users = [ "root" "@wheel" ];
+      substituters = [ "https://hyprland.cachix.org" ];
+      trusted-public-keys = ["hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="];
     };
     extraOptions = ''
       experimental-features = nix-command flakes
@@ -129,7 +133,7 @@ in
       cudatoolkit
       ffmpeg-full
 
-      waybar
+      pkgs-master.waybar
 
       spice-vdagent
     ];
@@ -238,6 +242,8 @@ in
       enable = true;
       package = pkgs-stable.mongodb;
     };
+
+    hardware.openrgb.enable = true;
   };
 
   # Virtualisation
@@ -251,6 +257,7 @@ in
     hyprland = {
       enable = true;
       xwayland.enable = true;
+      package = inputs.hyprland.packages.${pkgs.system}.hyprland;
     };
 
     fish = {
@@ -265,6 +272,7 @@ in
       enable = true;
       remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
       dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
+      gamescopeSession.enable = true;
     };
 
     alvr = {
@@ -291,9 +299,16 @@ in
       driSupport = true;
       driSupport32Bit = true;
 
+      package = pkgs-hyprland.mesa.drivers;
+      package32 = pkgs-hyprland.pkgsi686Linux.mesa.drivers;
+
       extraPackages = with pkgs; [
         vaapiVdpau
         libvdpau-va-gl
+	amdvlk
+      ];
+      extraPackages32 = with pkgs; [
+        driversi686Linux.amdvlk
       ];
     };
 
