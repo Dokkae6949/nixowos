@@ -243,7 +243,10 @@ in
       package = pkgs-stable.mongodb;
     };
 
-    hardware.openrgb.enable = true;
+    hardware.openrgb = {
+      enable = true;
+      package = pkgs.openrgb-with-all-plugins;
+    };
   };
 
   # Virtualisation
