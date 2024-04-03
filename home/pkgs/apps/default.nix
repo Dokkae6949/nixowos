@@ -3,6 +3,7 @@
 {
   imports = [
     ./terminals/kitty
+    ./terminals/foot
     ./databases/mongodb
     ./shells/fish
     ./shells/ags
@@ -41,11 +42,12 @@
     
     picocom
     filezilla
-    gamescope
     heroic
+    pkgs-unstable.mangohud
 
     pkgs-master.godot_4
-#    pkgs-master.aseprite
+    pkgs-unstable.krita
+    pkgs-master.aseprite
     (blender.override {
       cudaSupport = true;
     })

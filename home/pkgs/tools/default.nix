@@ -5,6 +5,8 @@
     ./git
     ./eza
     ./neovim
+    ./helix
+    ./zoxide
   ];
 
   home.packages = with pkgs-stable; [
@@ -20,7 +22,7 @@
     pkg-config
 
     python3
-    openjdk19
+    openjdk17
     nodejs_18
     makeWrapper
     sassc

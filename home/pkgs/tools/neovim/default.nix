@@ -6,7 +6,7 @@
 
     viAlias = true;
     vimAlias = true;
-    defaultEditor = true;
+    defaultEditor = false;
 
     extraConfig = ''
       set number relativenumber

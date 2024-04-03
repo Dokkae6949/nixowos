@@ -8,8 +8,10 @@
       shellAliases = {
         icat = "kitty icat";
 	f = "${pkgs-unstable.yazi}/bin/yazi";
+	c = "set tmp (mktemp -t \"yazi-cwd.XXXXX\") ; ${pkgs-unstable.yazi}/bin/yazi $argv --cwd-file=\"$tmp\" ; if set cwd (cat -- \"$tmp\"); and [ -n \"$cwd\" ]; and [ \"$cwd\" != \"$PWD\" ] ; cd -- \"$cwd\" ; end ; rm -f -- \"$tmp\"";
 	vl = "fusermount -u ~/Vault";
 	vu = "${pkgs-stable.encfs}/bin/encfs ~/.Vault ~/Vault";
+	e = "$EDITOR";
       };
 
       shellInit = ''
