@@ -9,6 +9,15 @@ in
     enable = true;
 
     settings = {
+      main = {
+        font = "JetBrainsMono Nerd Font:size=11";
+        pad = "5x5";
+      };
+
+      scrollback = {
+        lines = 10000;
+      };
+    
       colors = {
         foreground = "cdd6f4"; # Text
         background = "1e1e2e"; # Base

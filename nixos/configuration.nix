@@ -186,7 +186,7 @@ in
         };
       };
 
-      videoDrivers = ["nvidia"];
+      videoDrivers = ["nvidia" "amdgpu"];
     };
   
     pipewire = {
@@ -247,6 +247,10 @@ in
       enable = true;
       package = pkgs.openrgb-with-all-plugins;
     };
+
+    udev.extraRules = ''
+      SUBSYSTEM=="usb", ATTR{idVendor}=="2d40", ATTR{idProduct}=="00b7", MODE="0666", GROUP="plugdev"
+    '';
   };
 
   # Virtualisation

@@ -7,6 +7,7 @@
     ./neovim
     ./helix
     ./zoxide
+    ./zellij
   ];
 
   home.packages = with pkgs-stable; [
@@ -22,6 +23,7 @@
     pkg-config
 
     python3
+    python311Packages.pip
     openjdk17
     nodejs_18
     makeWrapper
@@ -37,7 +39,8 @@
     encfs
     pwntools
     nmap
-    exif
+    exiftool
+    file
     hexedit
     pkgs-unstable.insomnia
     burpsuite

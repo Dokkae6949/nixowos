@@ -22,6 +22,11 @@
     { device = "/dev/disk/by-uuid/8378-93D9";
       fsType = "vfat";
     };
+  
+  fileSystems."/mnt/win" =
+    { device = "/dev/disk/by-uuid/8EDCA137DCA11A8B";
+      options = [ "uid=1000" "gid=1000" "dmask=007" "fmask=117" ];
+    };
 
   swapDevices = [ ];
 
