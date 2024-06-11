@@ -1,9 +1,9 @@
-{ config, pkgs, ... }:
+{ config, pkgs, pkgs-unstable, ... }:
 
 {
   programs.imv = {
     enable = true;
-
+    package = pkgs-unstable.imv;
     settings = {
       options = {
         background = "1e1e2e";

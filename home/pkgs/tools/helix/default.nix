@@ -15,7 +15,7 @@
       };
 
       editor.lsp = {
-        display-inlay-hints = true;
+        display-inlay-hints = false;
       };
 
       editor.cursor-shape = {
@@ -30,13 +30,19 @@
     };
     
     languages = {
+      language-server.nixd = {
+        command = "nixd";
+      };
+    
       language = [
-        { name="rust"; auto-format=false; }
+        { name="rust"; auto-format=true; }
+        { name="nix"; language-servers=["nixd"]; }
       ];
     };
 
     extraPackages = with pkgs; [
-      nil
+      nixd
+      #nil
       rust-analyzer
       vscode-langservers-extracted
       clang-tools

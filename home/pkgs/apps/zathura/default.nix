@@ -9,49 +9,44 @@ in
       enable = true;
 
       options = {
-        # enable recoloring per default. Can be disabled by ':set' recolor in the app.
-        recolor = true;
+        default-fg              = "rgba(205,214,244,1)";
+        default-bg 			        = "rgba(30,30,46,1)";
 
-	# enable copy to clipboard via selecting text
-	selection-clipboard = "clipboard";
+        completion-bg		        = "rgba(49,50,68,1)";
+        completion-fg		        = "rgba(205,214,244,1)";
+        completion-highlight-bg	= "rgba(87,82,104,1)";
+        completion-highlight-fg	= "rgba(205,214,244,1)";
+        completion-group-bg		  = "rgba(49,50,68,1)";
+        completion-group-fg		  = "rgba(137,180,250,1)";
 
-        default-fg = "#${colors.base05}";
-        default-bg = "#${colors.base00}";
+        statusbar-fg		        = "rgba(205,214,244,1)";
+        statusbar-bg		        = "rgba(49,50,68,1)";
 
-        completion-bg = "#${colors.base02}";
-        completion-fg =	 "#${colors.base05}";
-        completion-highlight-bg	= "#${colors.base04}";
-        completion-highlight-fg	= "#${colors.base05}";
-	completion-group-bg = "#${colors.base02}";
-	completion-group-fg = "#${colors.base0D}";
+        notification-bg		      = "rgba(49,50,68,1)";
+        notification-fg		      = "rgba(205,214,244,1)";
+        notification-error-bg	  = "rgba(49,50,68,1)";
+        notification-error-fg	  = "rgba(243,139,168,1)";
+        notification-warning-bg	= "rgba(49,50,68,1)";
+        notification-warning-fg	= "rgba(250,227,176,1)";
 
-	statusbar-fg = "#${colors.base05}";
-	statusbar-bg = "#${colors.base02}";
+        inputbar-fg			        = "rgba(205,214,244,1)";
+        inputbar-bg 		        = "rgba(49,50,68,1)";
 
-	notification-bg = "#${colors.base02}";
-	notification-fg	= "#${colors.base05}";
-	notification-error-bg = "#${colors.base02}";
-	notification-error-fg =	"#${colors.base08}";
-	notification-warning-bg = "#${colors.base02}";
-	notification-warning-fg	= "#${colors.base0A}";
+        recolor                 = "true";
+        recolor-lightcolor		  = "rgba(30,30,46,1)";
+        recolor-darkcolor		    = "rgba(205,214,244,1)";
 
-	inputbar-fg = "#${colors.base05}";
-	inputbar-bg = "#${colors.base02}";
+        index-fg			          = "rgba(205,214,244,1)";
+        index-bg			          = "rgba(30,30,46,1)";
+        index-active-fg		      = "rgba(205,214,244,1)";
+        index-active-bg		      = "rgba(49,50,68,1)";
 
-	recolor-lightcolor = "#${colors.base00}";
-	recolor-darkcolor = "#${colors.base05}";
+        render-loading-bg		    = "rgba(30,30,46,1)";
+        render-loading-fg		    = "rgba(205,214,244,1)";
 
-	index-fg = "#${colors.base05}";
-	index-bg = "#${colors.base00}";
-	index-active-fg = "#${colors.base05}";
-	index-active-bg = "#${colors.base02}";
-
-	render-loading-bg = "#${colors.base00}";
-	render-loading-fg = "#${colors.base05}";
-
-	highlight-color = "#${colors.base04}";
-	highlight-fg = "#${colors.base17}";
-	highlight-active-color = "#${colors.base17}";
+        highlight-color		      = "rgba(87,82,104,0.5)";
+        highlight-fg            = "rgba(245,194,231,0.5)";
+        highlight-active-color	= "rgba(245,194,231,0.5)";
       };
     };
   };

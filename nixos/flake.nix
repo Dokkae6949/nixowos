@@ -7,7 +7,12 @@
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
     nixpkgs-master.url = "github:nixos/nixpkgs/master";
 
-    hyprland.url = "github:hyprwm/Hyprland";
+    # hyprland.url = "github:hyprwm/Hyprland";
+    hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
+    nixos-cosmic = {
+      url = "github:lilyinstarlight/nixos-cosmic";
+      inputs.nixpkgs.follows = "nixpkgs-unstable";
+    };
   };
 
   outputs = { 
@@ -68,16 +73,17 @@
 
         specialArgs = {
           inherit system;
-	  inherit inputs;
-	  inherit pkgs-deprecated;
-	  inherit pkgs-stable;
-	  inherit pkgs-unstable;
-	  inherit pkgs-master;
-	};
+      	  inherit inputs;
+      	  inherit pkgs-deprecated;
+      	  inherit pkgs-stable;
+      	  inherit pkgs-unstable;
+      	  inherit pkgs-master;
+      	};
 
-	modules = [
+      	modules = [
+          inputs.nixos-cosmic.nixosModules.default
           ./configuration.nix
-	];
+      	];
       };
     };
   };

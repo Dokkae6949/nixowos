@@ -37,6 +37,12 @@ in
         bright5 = "f5c2e7";    # pink
         bright6 = "94e2d5";    # teal
         bright7 = "a6adc8";    # Subtext 0
+        selection-foreground = "cdd6f4";
+        selection-background = "414356";
+        search-box-no-match = "11111b f38ba8";
+        search-box-match = "cdd6f4 313244";
+        jump-labels = "11111b fab387";
+        urls = "89b4fa";
       };
     };
   };

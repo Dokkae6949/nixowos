@@ -8,6 +8,7 @@
     ./helix
     ./zoxide
     ./zellij
+    ./imv
   ];
 
   home.packages = with pkgs-stable; [
@@ -35,6 +36,7 @@
     unp
 
     gparted
+    dbeaver
     pkgs-unstable.postman
     encfs
     pwntools
@@ -44,6 +46,7 @@
     hexedit
     pkgs-unstable.insomnia
     burpsuite
+    gh
     
     powershell
     appimage-run

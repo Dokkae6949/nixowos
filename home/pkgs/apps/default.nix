@@ -13,16 +13,21 @@
     ./zathura
   ];
 
+  services.easyeffects.enable = true;
+
   home.packages = with pkgs-stable; [
     firefox
     google-chrome
     gimp
+    figma-linux
     onlyoffice-bin
     pkgs-unstable.obsidian
     obs-studio
     pkgs-unstable.mpv
     tor-browser-bundle-bin
     pkgs-unstable.ani-cli
+    _2048-in-terminal
+    inputs.catppuccinifier.packages.${pkgs-unstable.system}.cli
 
     kicad
 
@@ -47,8 +52,9 @@
 
     pkgs-master.godot_4
     pkgs-unstable.krita
-    pkgs-master.aseprite
-    (blender.override {
+    pkgs-unstable.aseprite
+    pkgs-unstable.ldtk
+    (pkgs-unstable.blender.override {
       cudaSupport = true;
     })
 

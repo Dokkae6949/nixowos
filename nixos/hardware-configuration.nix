@@ -23,12 +23,21 @@
       fsType = "vfat";
     };
   
-  fileSystems."/mnt/win" =
-    { device = "/dev/disk/by-uuid/8EDCA137DCA11A8B";
+  fileSystems."/mnt/win11" =
+    { device = "/dev/disk/by-uuid/01DA89DC69F0F360";
       options = [ "uid=1000" "gid=1000" "dmask=007" "fmask=117" ];
     };
 
-  swapDevices = [ ];
+  fileSystems."/mnt/win10" =
+    { device = "/dev/disk/by-uuid/A442475C4247327A";
+      options = [ "uid=1000" "gid=1000" "dmask=007" "fmask=117" ];
+    };
+
+  swapDevices = [
+    { device = "/var/swapfile";
+      size = (1024 * 64) + (1024 * 2); # RAM size + 2GB
+    }
+  ];
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
   # (the default) this is the recommended approach. When using systemd-networkd it's

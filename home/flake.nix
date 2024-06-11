@@ -25,6 +25,11 @@
     nix-colors.url = "github:misterio77/nix-colors";
     
     ags.url = "github:Aylur/ags";
+
+    catppuccinifier = {
+      url = "github:lighttigerXIV/catppuccinifier";
+      inputs.nixpkgs.follows = "nixpkgs-unstable";
+    };
   };
 
   outputs = { home-manager, nixpkgs-deprecated, nixpkgs-stable, nixpkgs-unstable, nixpkgs-master, nix-colors, ... }@inputs:
@@ -38,7 +43,7 @@
         allowUnfree = true;
         allowUnfreePredicate = (_: true);
         android_sdk.accept_license = true;
-	permittedInsecurePackages = [
+      	permittedInsecurePackages = [
           "electron-25.9.0"
         ];
       };
@@ -50,7 +55,7 @@
         allowUnfree = true;
         allowUnfreePredicate = (_: true);
         android_sdk.accept_license = true;
-	permittedInsecurePackages = [
+      	permittedInsecurePackages = [
           "electron-25.9.0"
         ];
       };
@@ -62,7 +67,7 @@
         allowUnfree = true;
         allowUnfreePredicate = (_: true);
         android_sdk.accept_license = true;
-	permittedInsecurePackages = [
+      	permittedInsecurePackages = [
           "electron-25.9.0"
         ];
       };
@@ -74,7 +79,7 @@
         allowUnfree = true;
         allowUnfreePredicate = (_: true);
         android_sdk.accept_license = true;
-	permittedInsecurePackages = [
+      	permittedInsecurePackages = [
           "electron-25.9.0"
         ];
       };
@@ -86,11 +91,11 @@
       
       extraSpecialArgs = {
         inherit inputs;
-	inherit pkgs-deprecated;
-	inherit pkgs-stable;
-	inherit pkgs-unstable;
-	inherit pkgs-master;
-	inherit nix-colors;
+      	inherit pkgs-deprecated;
+      	inherit pkgs-stable;
+      	inherit pkgs-unstable;
+      	inherit pkgs-master;
+      	inherit nix-colors;
       };
 
       modules = [
