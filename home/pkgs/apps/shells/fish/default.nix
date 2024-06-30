@@ -7,11 +7,11 @@
 
       shellAliases = {
         icat = "kitty icat";
-	f = "${pkgs-unstable.yazi}/bin/yazi";
-	c = "set tmp (mktemp -t \"yazi-cwd.XXXXX\") ; ${pkgs-unstable.yazi}/bin/yazi $argv --cwd-file=\"$tmp\" ; if set cwd (cat -- \"$tmp\"); and [ -n \"$cwd\" ]; and [ \"$cwd\" != \"$PWD\" ] ; cd -- \"$cwd\" ; end ; rm -f -- \"$tmp\"";
-	vl = "fusermount -u ~/Vault";
-	vu = "${pkgs-stable.encfs}/bin/encfs ~/.Vault ~/Vault";
-	e = "$EDITOR";
+        f = "${pkgs-unstable.yazi}/bin/yazi";
+	      c = "set tmp (mktemp -t \"yazi-cwd.XXXXX\") ; ${pkgs-unstable.yazi}/bin/yazi $argv --cwd-file=\"$tmp\" ; if set cwd (cat -- \"$tmp\"); and [ -n \"$cwd\" ]; and [ \"$cwd\" != \"$PWD\" ] ; cd -- \"$cwd\" ; end ; rm -f -- \"$tmp\"";
+	      vl = "fusermount -u ~/Vault";
+	      vu = "${pkgs-stable.encfs}/bin/encfs ~/.Vault ~/Vault";
+      	e = "$EDITOR";
       };
 
       shellInit = ''
@@ -27,16 +27,16 @@
           success_symbol = "[[](mauve) ❯](maroon)";
           error_symbol = "[❯](red)";
           vimcmd_symbol = "[❮](green)";
-	};
+        };
 
-	directory = {
+        directory = {
           truncation_length = 4;
-	  style = "bold pink";
-	};
+          style = "bold pink";
+        };
 
-	palette = "catppuccin_mocha";
+        palette = "catppuccin_mocha";
 
-	palettes.catppuccin_mocha = {
+        palettes.catppuccin_mocha = {
           rosewater = "#f5e0dc";
           flamingo = "#f2cdcd";
           pink = "#f5c2e7";
@@ -63,7 +63,7 @@
           base = "#1e1e2e";
           mantle = "#181825";
           crust = "#11111b";
-	};
+        };
       };
     };
   };
