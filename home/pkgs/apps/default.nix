@@ -7,6 +7,8 @@
     ./databases/mongodb
     ./shells/fish
     ./shells/ags
+    ./shells/eww
+    ./shells/anyrun
 #    ./communication/webcord
     ./communication/vesktop
     ./spotify

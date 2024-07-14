@@ -1,15 +1,19 @@
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
+  home.packages = [
+    inputs.nixvim.packages."${pkgs.system}".default
+  ];
+  
+  home.sessionVariables = {
+    EDITOR = "nvim";
+  };
+  
   programs.neovim = {
-    enable = true;
+    enable = false;
 
     viAlias = true;
     vimAlias = true;
     defaultEditor = false;
-
-    extraConfig = ''
-      set number relativenumber
-    '';
   };
 }

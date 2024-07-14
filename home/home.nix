@@ -1,7 +1,8 @@
 {inputs, config, pkgs, nix-colors, ... }:
 
 let
-  cursor-theme = "Catppuccin-Mocha-Dark-Cursors";
+  cursor-theme = "catppuccin-mocha-dark-cursors";
+  cursor-theme-name = "Catppuccin-Mocha-Dark";
   cursor-package = pkgs.catppuccin-cursors.mochaDark;
 in
 {
@@ -54,9 +55,11 @@ in
     NIXOS_OZONE_WL = "1";
     ANDROID_SDK_ROOT = "/home/kurisu/Android/Sdk";
     ANDROID_HOME = "/home/kurisu/Android/Sdk";
+    HYPRCURSOR_THEME = cursor-theme-name;
+    HYPRCURSOR_SIZE = 24;
   };
 
-  home.sessionVariables.XCURSOR_THEME = cursor-theme;
+  home.sessionVariables.XCURSOR_THEME = cursor-theme-name;
   home.pointerCursor = {
     name = cursor-theme;
     package = cursor-package;
@@ -68,6 +71,10 @@ in
 
   gtk = {
     enable = true;
+    theme = {
+      name = "Adwaita-dark";
+      package = pkgs.gnome.gnome-themes-extra;
+    };
     iconTheme = {
       name = "Papirus-Dark";
       package = pkgs.papirus-icon-theme;

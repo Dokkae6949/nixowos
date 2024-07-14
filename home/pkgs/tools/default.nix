@@ -1,4 +1,4 @@
-{config, pkgs-stable, pkgs-unstable, ...}:
+{config, pkgs-stable, pkgs-unstable, inputs, ...}:
 
 {
   imports = [
@@ -31,9 +31,7 @@
     sassc
     
     zip
-    unzip
-    unrar
-    unp
+    inputs.ext.packages."${system}".ext
 
     gparted
     dbeaver
@@ -43,10 +41,12 @@
     nmap
     exiftool
     file
+    apktool
     hexedit
     pkgs-unstable.insomnia
     burpsuite
     gh
+    arp-scan
     
     powershell
     appimage-run

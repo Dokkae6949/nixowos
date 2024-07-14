@@ -20,15 +20,37 @@
 
     spicetify-nix = {
       url = "github:the-argus/spicetify-nix";
+      inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
 
-    nix-colors.url = "github:misterio77/nix-colors";
+    nix-colors = {
+      url = "github:misterio77/nix-colors";
+      inputs.nixpkgs.follows = "nixpkgs-unstable";
+    };
     
-    ags.url = "github:Aylur/ags";
+    ags = {
+      url = "github:Aylur/ags";
+      inputs.nixpkgs.follows = "nixpkgs-unstable";
+    };
 
     catppuccinifier = {
       url = "github:lighttigerXIV/catppuccinifier";
       inputs.nixpkgs.follows = "nixpkgs-unstable";
+    };
+
+    ext = {
+      url = "github:Dokkae6949/ext";
+      inputs.nixpkgs.follows = "nixpkgs-unstable";
+    };
+
+    nixvim = {
+      url = "github:Dokkae6949/nixvim";
+      inputs.nixpkgs.follows = "nixpkgs-unstable";
+    };
+
+    anyrun = {
+      url = "github:anyrun-org/anyrun";
+      follows = "nixpkgs";
     };
   };
 
