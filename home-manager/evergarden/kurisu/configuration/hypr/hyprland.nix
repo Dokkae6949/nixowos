@@ -14,6 +14,10 @@ in
       ];
 
       monitor = [
+        # This is a workaround which allows me to add 
+        # a shadow to the ags bar.
+        ",addreserved,0,0,45,0"
+      
         "desc:California Institute of Technology 0x1609,2560x1600@165,1080x1080,1.25"
         "desc:Samsung Electric Company S24D300 0x30333538,1920x1080@60,3000x0,1"
         "DP-3,1920x1080@60,1080x0,1"
