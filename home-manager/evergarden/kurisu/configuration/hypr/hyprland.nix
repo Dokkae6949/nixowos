@@ -158,7 +158,7 @@ in
 
       layerrule = [
         "blur,ags-bar.*"
-        "ignorezero,ags-bar.*"
+        "ignorealpha 0.59,ags-bar.*"
         "blur,eww-bar.*"
         "ignorezero,eww-bar.*"
         "blur,wofi"
