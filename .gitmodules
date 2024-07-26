@@ -1,0 +1,9 @@
+[submodule "pkgs/nixvim"]
+	path = pkgs/nixvim
+	url = https://github.com/Dokkae6949/nixvim.git
+[submodule "pkgs/anyrun"]
+	path = pkgs/anyrun
+	url = https://github.com/Dokkae6949/anyrun.git
+[submodule "pkgs/ext"]
+	path = pkgs/ext
+	url = https://github.com/Dokkae6949/ext.git
