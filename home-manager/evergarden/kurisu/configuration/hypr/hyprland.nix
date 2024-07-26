@@ -178,6 +178,7 @@ in
         "$mainMod SHIFT, F, fullscreen, 0"
         "$mainMod, O, toggleopaque"
         "$mainMod, D, exec, wofi --show drun"
+        "$mainMod, N, exec, swaync-client -t"
         "$altMod, V, exec, cliphist list | wofi --dmenu | cliphist decode | wl-copy"
         "$mainMod, R, exec, hyprpicker -a"
         "$mainMod SHIFT, S, exec, grimblast --notify --freeze copy area"
