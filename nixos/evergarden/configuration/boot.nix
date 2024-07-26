@@ -1,0 +1,29 @@
+{ pkgs, ... }:
+
+{
+  boot = {
+    loader = {
+      efi.canTouchEfiVariables = true;
+
+      grub = {
+        enable = true;
+        useOSProber = true;
+        device = "nodev";
+        efiSupport = true;
+        default = "saved";
+      };
+    };
+
+    supportedFilesystems = ["ntfs"];
+
+    extraModprobeConfig = ''
+      options snd-intel-dspcfg dsp_driver=3
+    '';
+
+    kernelParams = [
+      "amd_iommu=on"
+    ];
+
+    kernelPackages = pkgs.linuxPackages_zen;
+  };
+}
