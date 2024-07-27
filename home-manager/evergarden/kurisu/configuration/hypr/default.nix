@@ -15,9 +15,12 @@ in
   home = {
     sessionVariables = {
       NIXOS_OZONE_WL = "1";
-      WLR_NO_HARDWARE_CURSORS = "1";
-      ANDROID_SDK_ROOT = "/home/kurisu/Android/Sdk";
-      ANDROID_HOME = "/home/kurisu/Android/Sdk";
+      
+      LIBVA_DRIVER_NAME = "nvidia";
+      XDG_SESSION_TYPE = "wayland";
+      GBM_BACKEND = "nvidia-drm";
+      __GLX_VENDOR_LIBRARY_NAME = "nvidia";
+
       XCURSOR_THEME = cursor-theme-name;
       HYPRCURSOR_THEME = cursor-theme-name;
       HYPRCURSOR_SIZE = 24;
