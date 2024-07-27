@@ -123,6 +123,10 @@ in
         force_zero_scaling = true;
       };
 
+      cursor = {
+        no_hardware_cursors = true;
+      };
+
       "$mainMod" = "ALT"; # main modifier
       "$altMod" = "SUPER"; # alternative modifier
 
