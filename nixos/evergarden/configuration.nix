@@ -10,7 +10,7 @@
 {
   imports = [
     # If you want to use modules your own flake exports (from modules/nixos):
-    # outputs.nixosModules.example
+    outputs.nixosModules.storage-optimization
 
     # Import extra configuration files
     ./configuration
@@ -29,6 +29,10 @@
     config = {
       allowUnfree = true;
     };
+  };
+
+  uwu = {
+    nix.storage-optimization.enable = true;
   };
 
   nix = let
