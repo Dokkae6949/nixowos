@@ -16,7 +16,7 @@
     gnome.gnome-keyring.enable = true;
   };
 
-  environment.systemPacakges = with pkgs; [
+  environment.systemPackages = with pkgs; [
     polkit_gnome
   ];
 
