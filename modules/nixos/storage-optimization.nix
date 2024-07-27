@@ -10,7 +10,7 @@ in
   options.uwu.nix.storage-optimization = {
     enable = lib.mkEnableOption "Whether to enable all gc tools";
   };
-  
+
   config = lib.mkIf cfg.enable {
     nix = {
       gc = {
