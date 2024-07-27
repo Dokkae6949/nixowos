@@ -4,7 +4,7 @@
 }:
 
 let
-  cfg = config.uwu.nix.storage-collection;
+  cfg = config.uwu.nix.storage-optimization;
 in
 {
   options.uwu.nix.storage-optimization = {
