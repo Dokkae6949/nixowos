@@ -10,7 +10,7 @@
 {
   imports = [
     # If you want to use modules your own flake exports (from modules/nixos):
-    # outputs.nixosModules.example
+    outputs.nixosModules.storage-optimization
 
     # Import extra configuration files
     ./configuration
@@ -63,6 +63,10 @@
       keyd
       cudatoolkit
     ];
+  };
+
+  uwu = {
+    nix.storage-optimization.enable = true;
   };
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
