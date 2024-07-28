@@ -20,7 +20,7 @@
 
       background = [
         { # monitor = 
-          path = "${./resources/images/wallpaper/active-wallpaper.png}";
+          path = "${./resources/images/wallpaper/leaves.png}";
           blur_passes = 4;
           blur_size = 10;
           color = "$base";
