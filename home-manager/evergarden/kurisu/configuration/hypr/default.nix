@@ -40,6 +40,7 @@ in
       hyprlock
 
       wofi
+      tofi
       swww
       dunst
       swaynotificationcenter
