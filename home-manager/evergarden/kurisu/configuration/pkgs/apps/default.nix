@@ -43,6 +43,7 @@
     (jetbrains.plugins.addPlugins jetbrains.idea-ultimate [ "github-copilot" ])
     (jetbrains.plugins.addPlugins jetbrains.webstorm [ "github-copilot" ])
     (jetbrains.plugins.addPlugins jetbrains.rust-rover [ "github-copilot" ])
+    (jetbrains.plugins.addPlugins jetbrains.rider [ "github-copilot" ])
     
     picocom
     filezilla
