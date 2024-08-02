@@ -34,7 +34,6 @@
     # kicad
 
     vscode
-    dotnet-runtime_7 # required for oracledevtools
 
     # sqldeveloper
     # zed-editor

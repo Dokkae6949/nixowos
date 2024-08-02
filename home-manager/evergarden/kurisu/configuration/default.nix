@@ -6,5 +6,6 @@
     ./pkgs
 
     ./android.nix
+    ./dotnet.nix
   ];
 }

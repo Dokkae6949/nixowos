@@ -35,9 +35,8 @@
 , withFontconfig ? true
 , withUdev ? true
 , withTouch ? true
-, dotnet-sdk
 , mono
-, dotnet-runtime
+, dotnetCorePackages
 , callPackage
 }:
 
@@ -87,8 +86,7 @@ stdenv.mkDerivation rec {
     installShellFiles
     python3
     mono
-    dotnet-sdk
-    dotnet-runtime
+    dotnetCorePackages.sdk_8_0
   ];
 
   buildInputs = [
@@ -109,8 +107,7 @@ stdenv.mkDerivation rec {
     libxkbcommon
     alsa-lib
     mono
-    dotnet-sdk
-    dotnet-runtime
+    dotnetCorePackages.sdk_8_0
   ]
   ++ lib.optional withPulseaudio libpulseaudio
   ++ lib.optional withDbus dbus
