@@ -1114,6 +1114,9 @@
         "ext": "ext",
         "home-manager": "home-manager",
         "hyprland": "hyprland",
+        "nix-index-database": [
+          "nixpkgs"
+        ],
         "nixos-hardware": "nixos-hardware",
         "nixpkgs": "nixpkgs_3",
         "nixpkgs-unstable": "nixpkgs-unstable",

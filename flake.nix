@@ -14,6 +14,11 @@
 
     hyprland.url = "git+https://github.com/hyprwm/Hyprland?rev=8a4548e4302b1cc00fca368a7cc2e3171516420c&submodules=1";
 
+    nix-index-database = {
+      url = "github:nix-community/nix-index-database";
+      follows = "nixpkgs";
+    };
+
     ags = {
       url = "github:Aylur/ags";
       inputs.nixpkgs.follows = "nixpkgs";

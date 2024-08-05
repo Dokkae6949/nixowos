@@ -1,4 +1,5 @@
-{ outputs
+{ inputs
+, outputs
 , ...
 }:
 
@@ -8,7 +9,7 @@
     outputs.homeManagerModules.communication
 
     # Or modules exported from other flakes (such as nix-colors):
-    # inputs.nix-colors.homeManagerModules.default
+    inputs.nix-index-database.hmModules.nix-index
 
     ./configuration
   ];
@@ -30,9 +31,12 @@
     homeDirectory = "/home/kurisu";
   };
 
-  # Enable home-manager and git
-  programs.home-manager.enable = true;
-  programs.git.enable = true;
+  # Enable essential programs
+  programs = {
+    home-manager.enable = true;
+    git.enable = true;
+    nix-index.enable = true;
+  };
 
   # Nicely reload system units when changing configs
   systemd.user.startServices = "sd-switch";

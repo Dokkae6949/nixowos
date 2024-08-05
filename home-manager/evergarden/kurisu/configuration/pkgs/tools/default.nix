@@ -46,6 +46,7 @@
     burpsuite
     gh
     arp-scan
+    graphviz
     
     powershell
     appimage-run
