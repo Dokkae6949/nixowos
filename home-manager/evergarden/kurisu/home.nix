@@ -9,7 +9,7 @@
     outputs.homeManagerModules.communication
 
     # Or modules exported from other flakes (such as nix-colors):
-    inputs.nix-index-database.hmModules.nix-index
+    # inputs.nix-index-database.hmModules.nix-index
 
     ./configuration
   ];
