@@ -8,6 +8,7 @@
     readerConfig = ''
       # Just an empty config
     '';
+    plugins = [ pkgs.ccid ];
   };
 
   environment.systemPackages = with pkgs; [
