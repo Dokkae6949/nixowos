@@ -26,5 +26,6 @@
     ./postgresql.nix
     ./virtualisation.nix
     ./steam.nix
+    ./pcsc.nix
   ];
 }
