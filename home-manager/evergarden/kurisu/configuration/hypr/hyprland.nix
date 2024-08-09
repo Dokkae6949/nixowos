@@ -230,8 +230,6 @@ in
       bindle = [
         ", XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
         ", XF86AudioMicMute, exec, wpctl set-mute @DEFAULT_SOURCE@ toggle"
-        ", XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
-        ", XF86AudioMicMute, exec, wpctl set-mute @DEFAULT_SOURCE@ toggle"
 
         ", XF86MonBrightnessDown, exec, brightnessctl set 10%-"
         ", XF86MonBrightnessUp, exec, brightnessctl set 10%+"
