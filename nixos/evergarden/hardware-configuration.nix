@@ -30,6 +30,7 @@
 
     kernelModules = ["kvm-amd"];
     extraModulePackages = [];
+    blacklistedKernelModules = [ "pn533" "pn533_usb" "nfc" ];
   };
 
   fileSystems."/" = {
