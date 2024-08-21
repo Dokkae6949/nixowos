@@ -2,7 +2,8 @@
 
 {
   home.packages = [
-    inputs.nixvim.packages."${pkgs.system}".default
+    # inputs.nixvim.packages."${pkgs.system}".default
+    pkgs.cutievim
   ];
   
   home.sessionVariables = {
