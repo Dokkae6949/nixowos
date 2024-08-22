@@ -4,5 +4,4 @@ pkgs: {
   # example = pkgs.callPackage ./example { };
   godot4-mono = pkgs.callPackage ./godot/4/mono/default.nix { };
   pcsc-dotnet = pkgs.callPackage ./pcsc-dotnet.nix { };
-  cutievim = pkgs.callPackage ./nixvim { };
 }

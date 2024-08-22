@@ -18,6 +18,7 @@
   services.easyeffects.enable = true;
 
   home.packages = with pkgs; [
+    inputs.zen-browser.packages."${system}".default
     firefox
     google-chrome
     gimp
@@ -29,7 +30,7 @@
     tor-browser-bundle-bin
     ani-cli
     _2048-in-terminal
-    inputs.catppuccinifier.packages.${pkgs.system}.cli
+    inputs.catppuccinifier.packages.${system}.cli
 
     # kicad
 
