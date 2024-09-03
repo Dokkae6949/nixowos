@@ -19,7 +19,9 @@ in
         ",addreserved,0,0,45,0"
       
         "desc:California Institute of Technology 0x1609,2560x1600@165,1080x1080,1.25"
+        #"desc:California Institute of Technology 0x1609,2560x1600@165,1920x0,1.25"
         "desc:Samsung Electric Company S24D300 0x30333538,1920x1080@60,3000x0,1"
+        "desc:GWD ARZOPA 000000000000,1920x1080@60,0x0,1"
         "DP-3,1920x1080@60,1080x0,1"
         "DP-4,1920x1080@60,0x0,1,transform,1"
         ",preferred,auto,1,mirror,desc:California Institute of Technology 0x1609"
