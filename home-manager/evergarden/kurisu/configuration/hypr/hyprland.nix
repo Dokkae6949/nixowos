@@ -187,7 +187,7 @@ in
         "$mainMod, V, togglefloating,"
         "$mainMod, F, fullscreen, 1"
         "$mainMod SHIFT, F, fullscreen, 0"
-        "$mainMod, O, hyprctl setprop active opaque toggle"
+        "$mainMod, O, exec, hyprctl setprop active opaque toggle"
         "$mainMod, D, exec, tofi-drun --drun-launch=true"
         "$mainMod, N, exec, swaync-client -t"
         "$altMod, V, exec, cliphist list | tofi | cliphist decode | wl-copy"
