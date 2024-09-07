@@ -45,7 +45,7 @@ in
       enable = cfg.spicetify.enable;
       theme = cfg.spicetify.theme;
       colorScheme = cfg.spicetify.colorScheme;
-      enableExtension = with spicePkgs.extensions; [
+      enableExtensions = with spicePkgs.extensions; [
         fullAppDisplay
         shuffle
         hidePodcasts
