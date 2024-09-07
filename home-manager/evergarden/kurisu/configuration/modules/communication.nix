@@ -9,7 +9,7 @@
 
   uwu = {
     communication = {
-      vestop.enable = true;
+      vesktop.enable = true;
     };
   };
 }
