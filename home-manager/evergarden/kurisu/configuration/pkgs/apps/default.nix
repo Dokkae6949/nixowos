@@ -55,9 +55,9 @@
     krita
     aseprite
     ldtk
-    (blender.override {
-      cudaSupport = true;
-    })
+#    (blender.override {
+#      cudaSupport = true;
+#    })
 
     cava
     hyfetch
