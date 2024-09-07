@@ -20,7 +20,7 @@ in
     spicetify = {
       enable = lib.mkEnableOption "Whether to enable spicetify";
       theme = lib.mkOption {
-        type = lib.types.package;
+        type = lib.types.attrs;
         default = spicePkgs.themes.catppuccin;
         example = spicePkgs.themes.catppuccin;
         description = "The theme which should be used";
@@ -37,7 +37,7 @@ in
 
   config = lib.mkIf cfg.enable {
     # TODO: Figure out the correct way of doing this
-    home.packages = lib.mkNotIf cfg.spicetify.enable [
+    home.packages = lib.mkIf (cfg.spicetify.enable == false ) [
       pkgs.spotify
     ];
 
