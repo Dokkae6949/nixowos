@@ -41,7 +41,7 @@ in
       pkgs.spotify
     ];
 
-    programs.spicetify = {
+    programs.spicetify = lib.mkIf cfg.spicetify.enable {
       enable = cfg.spicetify.enable;
       theme = cfg.spicetify.theme;
       colorScheme = cfg.spicetify.colorScheme;

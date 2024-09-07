@@ -10,8 +10,8 @@
     ./shells/eww
     # ./shells/anyrun
     # ./communication/webcord
-    ./communication/vesktop
-    ./spotify
+    # ./communication/vesktop
+    # ./spotify
     ./zathura
   ];
 
