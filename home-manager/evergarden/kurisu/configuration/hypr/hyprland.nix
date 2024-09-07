@@ -115,10 +115,13 @@ in
       misc = {
         disable_hyprland_logo = true;
         vrr = 1;
-        no_direct_scanout = false;
         focus_on_activate = true;
         animate_manual_resizes = true;
         animate_mouse_windowdragging = false;
+      };
+
+      render = {
+        direct_scanout = true;
       };
 
       xwayland = {
@@ -148,7 +151,7 @@ in
         "workspace 10 silent,class:(steam)"
 
         "tile,class:(Aseprite)"
-        "fakefullscreen,class:^(code-url-handler)$"
+        # "fakefullscreen,class:^(code-url-handler)$"
         "fullscreen,class:^(cs2)$"
         "float,class:^(bevy)"
         "center,class:^(bevy)"
@@ -184,7 +187,7 @@ in
         "$mainMod, V, togglefloating,"
         "$mainMod, F, fullscreen, 1"
         "$mainMod SHIFT, F, fullscreen, 0"
-        "$mainMod, O, toggleopaque"
+        "$mainMod, O, hyprctl setprop active opaque toggle"
         "$mainMod, D, exec, tofi-drun --drun-launch=true"
         "$mainMod, N, exec, swaync-client -t"
         "$altMod, V, exec, cliphist list | tofi | cliphist decode | wl-copy"
@@ -229,19 +232,23 @@ in
         "$mainMod SHIFT, 0, movetoworkspace, 10"
       ];
 
-      bindle = [
+      bindl = [
         ", XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
         ", XF86AudioMicMute, exec, wpctl set-mute @DEFAULT_SOURCE@ toggle"
-
-        ", XF86MonBrightnessDown, exec, brightnessctl set 10%-"
-        ", XF86MonBrightnessUp, exec, brightnessctl set 10%+"
-        "SHIFT, XF86MonBrightnessDown, exec, brightnessctl set 5%-"
-        "SHIFT, XF86MonBrightnessUp, exec, brightnessctl set 5%+"
 
         ", XF86AudioPlay, exec, playerctl play-pause"
         ", XF86AudioNext, exec, playerctl next"
         ", XF86AudioPrev, exec, playerctl previous"
         ", XF86audiostop, exec, playerctl stop"
+      ];
+
+      bindle = [
+        ", XF86AudioRaiseVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"
+        ", XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
+        ", XF86MonBrightnessDown, exec, brightnessctl set 10%-"
+        ", XF86MonBrightnessUp, exec, brightnessctl set 10%+"
+        "SHIFT, XF86MonBrightnessDown, exec, brightnessctl set 5%-"
+        "SHIFT, XF86MonBrightnessUp, exec, brightnessctl set 5%+"
       ];
 
       bindm = [

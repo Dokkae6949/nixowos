@@ -68,7 +68,8 @@
     nvidia = {
       modesetting.enable = lib.mkDefault true;
       powerManagement.enable = lib.mkDefault true;
-      open = lib.mkDefault false;
+      powerManagement.finegrained = lib.mkDefault true;
+      open = lib.mkForce false;
 
       # We have to overwrite the amd gpu bus Id because
       # On this laptop the ID changes to 6 instead of 5 if 2 disks

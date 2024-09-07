@@ -3,6 +3,6 @@
 {
   services.mongodb = {
     enable = true;
-    package = pkgs.mongodb;
+    package = pkgs.mongodb-ce;
   };
 }
