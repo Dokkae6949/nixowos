@@ -2,6 +2,8 @@
 
 {
   imports = [
+    ./services
+
     ./boot.nix
     ./users.nix
     ./time.nix
