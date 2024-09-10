@@ -27,6 +27,7 @@
 , speechd
 , fontconfig
 , udev
+, wayland
 , wayland-scanner
 , withPlatform ? "linuxbsd"
 , withTarget ? "editor"
@@ -95,6 +96,7 @@ stdenv.mkDerivation rec {
       libxkbcommon
       alsa-lib
       mono
+      wayland
       wayland-scanner
       dotnet-sdk_8
       dotnet-runtime_8
