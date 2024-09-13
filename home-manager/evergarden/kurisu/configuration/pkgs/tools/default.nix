@@ -47,6 +47,7 @@
     gh
     arp-scan
     graphviz
+    networkmanagerapplet
     
     powershell
     appimage-run
