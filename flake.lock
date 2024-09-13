@@ -1054,14 +1054,15 @@
         "nixpkgs": [
           "nixpkgs"
         ],
-        "nixvim": "nixvim_2"
+        "nixvim": "nixvim_2",
+        "plugin-markdown": "plugin-markdown"
       },
       "locked": {
-        "lastModified": 1724243892,
-        "narHash": "sha256-vt3bGK2VdphqxkzvYy59s47qRow/pIZQzK0MiOWTMmg=",
+        "lastModified": 1726166829,
+        "narHash": "sha256-cyrwgnoAR4FzZqfHAktG7cR06B9TlbDEIY5MYGB5H+8=",
         "owner": "Dokkae6949",
         "repo": "nixvim",
-        "rev": "a58d448e1745999d3a4852db8d5654ab5f90b62e",
+        "rev": "7691a6bda1176019be694404bb62ef13e6967ad9",
         "type": "github"
       },
       "original": {
@@ -1092,6 +1093,22 @@
       "original": {
         "owner": "nix-community",
         "repo": "nixvim",
+        "type": "github"
+      }
+    },
+    "plugin-markdown": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1725904000,
+        "narHash": "sha256-mbqX0+yGMjW3fHtDXVnVh6nUOG6waCW/sAXSQugc33Y=",
+        "owner": "MeanderingProgrammer",
+        "repo": "markdown.nvim",
+        "rev": "a5e2d0b1215814c3d033be1fd8eccf59ce366399",
+        "type": "github"
+      },
+      "original": {
+        "owner": "MeanderingProgrammer",
+        "repo": "markdown.nvim",
         "type": "github"
       }
     },
