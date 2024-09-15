@@ -43,11 +43,15 @@
     apktool
     hexedit
     insomnia
-    burpsuite
+    burpsuite-fixed
     gh
     arp-scan
     graphviz
     networkmanagerapplet
+
+    # Cyber Security
+    openvpn3
+    samba
     
     powershell
     appimage-run

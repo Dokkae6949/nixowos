@@ -11,4 +11,6 @@
       allowedUDPPorts = [];
     };
   };
+
+  programs.openvpn3.enable = true;
 }
