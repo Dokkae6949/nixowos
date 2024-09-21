@@ -7,3 +7,6 @@
 [submodule "pkgs/ext"]
 	path = pkgs/ext
 	url = https://github.com/Dokkae6949/ext.git
+[submodule "pkgs/zen-browser-flake"]
+	path = pkgs/zen-browser-flake
+	url = https://github.com/Dokkae6949/zen-browser-flake
