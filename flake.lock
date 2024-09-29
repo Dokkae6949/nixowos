@@ -1058,11 +1058,11 @@
         "plugin-markdown": "plugin-markdown"
       },
       "locked": {
-        "lastModified": 1726166829,
-        "narHash": "sha256-cyrwgnoAR4FzZqfHAktG7cR06B9TlbDEIY5MYGB5H+8=",
+        "lastModified": 1727550618,
+        "narHash": "sha256-/QsU9lExACeI/g2i1X1aJ8sxplXrx2SCzNwfL+i11sE=",
         "owner": "Dokkae6949",
         "repo": "nixvim",
-        "rev": "7691a6bda1176019be694404bb62ef13e6967ad9",
+        "rev": "1c18fcf6cc913bf65bc67f8fbd2c7c79c9a53fd5",
         "type": "github"
       },
       "original": {
@@ -1427,11 +1427,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1726920317,
-        "narHash": "sha256-zMQ//BTvIRjBCFqRVjSsPK6ZynG401M/x7CtfOQ/jjo=",
+        "lastModified": 1727589738,
+        "narHash": "sha256-YM5ZoyBJI4RAdM+F4Gebk/RQl5G+94vpJWUN46+NR4U=",
         "owner": "Dokkae6949",
         "repo": "zen-browser-flake",
-        "rev": "0ce32cef0708b9405ff623f4beb7da88e7c43717",
+        "rev": "0fc13f96baba467d6116dec54814ccc480153c86",
         "type": "github"
       },
       "original": {

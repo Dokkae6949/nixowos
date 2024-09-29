@@ -44,6 +44,7 @@
     (jetbrains.plugins.addPlugins jetbrains.webstorm [ "github-copilot" ])
     (jetbrains.plugins.addPlugins jetbrains.rust-rover [ "github-copilot" ])
     (jetbrains.plugins.addPlugins jetbrains.rider [ "github-copilot" ])
+    jetbrains.dataspell
     
     picocom
     filezilla

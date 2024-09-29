@@ -207,6 +207,7 @@ in
         "$altMod, j, movefocus, d"
 
         # Move to workspace
+        "$mainMod, Tab, workspace, previous"
         "$mainMod, 1, workspace, 1"
         "$mainMod, 2, workspace, 2"
         "$mainMod, 3, workspace, 3"
