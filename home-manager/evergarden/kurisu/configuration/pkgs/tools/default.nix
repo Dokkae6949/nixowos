@@ -17,7 +17,6 @@
     cmake
     scons
     # bear
-    gdb
 
     rustup
     openssl
@@ -37,14 +36,10 @@
     gparted
     postman
     encfs
-    pwntools
-    nmap
     exiftool
-    file
     apktool
-    hexedit
     insomnia
-    burpsuite-fixed
+    # burpsuite-fixed
     gh
     arp-scan
     graphviz

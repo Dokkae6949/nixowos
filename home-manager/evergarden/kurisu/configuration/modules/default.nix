@@ -9,5 +9,6 @@
   imports = [
     ./audio.nix
     ./communication.nix
+    ./hacking.nix
   ];
 }

@@ -3,4 +3,5 @@
 {
   audio = import ./audio;
   communication = import ./communication;
+  hacking = import ./hacking;
 }
