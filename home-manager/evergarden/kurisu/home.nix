@@ -17,6 +17,7 @@
       outputs.overlays.additions
       outputs.overlays.modifications
       outputs.overlays.stable-packages
+      outputs.overlays.master-packages
     ];
 
     config = {

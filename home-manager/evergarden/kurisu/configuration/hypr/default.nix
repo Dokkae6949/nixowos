@@ -47,7 +47,7 @@ in
 
       playerctl
       brightnessctl
-      cliphist
+      pkgs.master.cliphist
       wl-clipboard
       grim
       libnotify

@@ -162,6 +162,7 @@ in
         # "forceinput,title:Godot"
         # "windowdance,title:Godot"
         "tile,title:Godot"
+        "nofocus,class:^ghidra-.+$,title:^win.+$,floating:1,fullscreen:0"
       ];
 
       layerrule = [

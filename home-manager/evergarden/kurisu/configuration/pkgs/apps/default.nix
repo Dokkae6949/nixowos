@@ -38,7 +38,7 @@
 
     # sqldeveloper
     # zed-editor
-    # ciscoPacketTracer8
+    ciscoPacketTracer8
     android-studio
     (jetbrains.plugins.addPlugins jetbrains.idea-ultimate [ "github-copilot" ])
     (jetbrains.plugins.addPlugins jetbrains.webstorm [ "github-copilot" ])
@@ -54,7 +54,7 @@
     godot_4
     godot4-mono
     krita
-    aseprite
+    pkgs.master.aseprite
     ldtk
 #    (blender.override {
 #      cudaSupport = true;

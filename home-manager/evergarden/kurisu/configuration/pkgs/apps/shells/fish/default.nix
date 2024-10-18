@@ -12,6 +12,7 @@
 	      vl = "fusermount -u ~/Vault";
 	      vu = "${pkgs.encfs}/bin/encfs ~/.Vault ~/Vault";
       	e = "$EDITOR";
+        tree = "${pkgs.eza}/bin/eza --tree";
       };
 
       shellInit = ''

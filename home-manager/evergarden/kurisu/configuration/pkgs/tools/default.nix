@@ -16,7 +16,7 @@
     clang
     cmake
     scons
-    bear
+    # bear
     gdb
 
     rustup
@@ -51,7 +51,7 @@
     networkmanagerapplet
 
     # Cyber Security
-    openvpn3
+    # openvpn3
     samba
     
     powershell
