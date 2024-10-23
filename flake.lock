@@ -1307,11 +1307,11 @@
         "nixvim": "nixvim_2"
       },
       "locked": {
-        "lastModified": 1729410359,
-        "narHash": "sha256-88j84mzl/9tQ1ElW0mz4khHtUx/g/JRMtlvf2a51ras=",
+        "lastModified": 1729503739,
+        "narHash": "sha256-NlwYFLJfuBzMTV5t6P05737iTpiFnAL5ZklEXG7B06s=",
         "owner": "Dokkae6949",
         "repo": "nixvim",
-        "rev": "61b0e4ec465d7680864dc0b6bb6fe00fc19cdf09",
+        "rev": "7328f5134280d8dfadce07a5835eaedb351e72df",
         "type": "github"
       },
       "original": {

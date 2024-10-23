@@ -18,6 +18,8 @@
     scons
     # bear
 
+    sqldeveloper
+
     rustup
     openssl
     pkg-config
@@ -50,6 +52,7 @@
     samba
     
     powershell
+    typst
     appimage-run
     yazi
     grimblast
