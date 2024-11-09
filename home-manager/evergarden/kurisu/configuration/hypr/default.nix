@@ -38,6 +38,7 @@ in
     packages = with pkgs; [
       hyprpicker
       hyprlock
+      hyprpanel
 
       wofi
       tofi

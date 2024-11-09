@@ -14,6 +14,7 @@
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
 
     hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
+    hyprpanel.url = "github:Jas-SinghFSU/HyprPanel";
 
     nix-index-database = {
       url = "github:nix-community/nix-index-database";

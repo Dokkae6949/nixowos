@@ -1,4 +1,5 @@
-{ outputs
+{ inputs
+, outputs
 , ...
 }:
 
@@ -18,6 +19,8 @@
       outputs.overlays.modifications
       outputs.overlays.stable-packages
       outputs.overlays.master-packages
+
+      inputs.hyprpanel.overlay
     ];
 
     config = {
