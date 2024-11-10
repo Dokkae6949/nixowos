@@ -66,7 +66,7 @@ in
       };
 
       decoration = {
-        rounding = 0;
+        rounding = 12;
         drop_shadow = true;
         shadow_range = 20;
         shadow_render_power = 2;
@@ -79,7 +79,7 @@ in
           ignore_opacity = true;
           new_optimizations = true;
           popups = true;
-          xray = true;
+          # xray = true;
         };
       };
 

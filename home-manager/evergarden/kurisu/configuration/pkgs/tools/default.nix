@@ -18,14 +18,14 @@
     scons
     # bear
 
-    sqldeveloper
+    # sqldeveloper
 
     rustup
     openssl
     pkg-config
 
     python3
-    python311Packages.conda
+    # python311Packages.conda
     python311Packages.pip
     openjdk17
     nodejs_18

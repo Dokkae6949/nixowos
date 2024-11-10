@@ -52,7 +52,7 @@
     mangohud
 
     godot_4
-    godot4-mono
+    # godot4-mono
     krita
     pkgs.master.aseprite
     ldtk
