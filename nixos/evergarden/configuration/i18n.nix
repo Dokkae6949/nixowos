@@ -13,7 +13,7 @@
       LC_NUMERIC = "de_AT.UTF-8";
       LC_PAPER = "de_AT.UTF-8";
       LC_TELEPHONE = "de_AT.UTF-8";
-      LC_TIME = "de_AT.UTF-8";
+      LC_TIME = "en_US.UTF-8";
     };
   };
 }

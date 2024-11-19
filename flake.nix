@@ -6,12 +6,19 @@
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-23.11";
     nixpkgs-master.url = "github:nixos/nixpkgs/master";
 
+    secrets = {
+      url = "git+ssh://git@github.com/Dokkae6949/nixowos-secrets.git?ref=main&shallow=1";
+      flake = false;
+    };
+
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
+
+    sops-nix.url = "github:Mic92/sops-nix";
 
     hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
     hyprpanel.url = "github:Jas-SinghFSU/HyprPanel";

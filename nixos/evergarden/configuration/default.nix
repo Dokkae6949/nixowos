@@ -21,6 +21,7 @@
     ./keyboard.nix
     ./fonts.nix
     ./i18n.nix
+    ./sops.nix
 
     ./hyprland.nix
     ./fish.nix

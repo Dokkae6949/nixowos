@@ -1,11 +1,17 @@
-{ pkgs, ... }:
+{ pkgs
+, config
+, ... 
+}:
 
+let
+  password_hash = "users/${config.users.users.kurisu.name}/password_hash";
+in
 {
+  sops.secrets.${password_hash}.neededForUsers = true;
+
   users.users = {
     kurisu = {
-      # You can skip setting a root password by passing '--no-root-passwd' to nixos-install.
-      # Be sure to change it (using passwd) after rebooting!
-      initialPassword = "password";
+      hashedPasswordFile = config.sops.secrets.${password_hash}.path;
       isNormalUser = true;
       openssh.authorizedKeys.keys = [];
       extraGroups = [
