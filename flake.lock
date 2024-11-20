@@ -1624,10 +1624,10 @@
     "secrets": {
       "flake": false,
       "locked": {
-        "lastModified": 1732012936,
-        "narHash": "sha256-m5zhFpfAwLt97mnOxZULYL0TMTrM7h2vJZREB2X67mU=",
+        "lastModified": 1732087635,
+        "narHash": "sha256-FUuUGwenkd8cnSytX22jDW3DFRZXg451yA7MYdCwxzI=",
         "ref": "main",
-        "rev": "aaae988c583fecd5674e1ef35ad1ce91592f7bbe",
+        "rev": "35438f9eed75453ddef791f85529fb1506eba6ff",
         "shallow": true,
         "type": "git",
         "url": "ssh://git@github.com/Dokkae6949/nixowos-secrets.git"
