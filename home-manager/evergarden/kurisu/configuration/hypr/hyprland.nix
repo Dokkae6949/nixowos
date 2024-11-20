@@ -56,13 +56,13 @@ in
       ];
 
       general = {
-        gaps_in = 10;
+        gaps_in = 5;
         gaps_out = 20;
-        border_size = 1;
+        border_size = 2;
         layout = "dwindle";
         
-        "col.active_border" = "$pink";
-        "col.inactive_border" = "$base";
+        "col.active_border" = "$mauve $red $peach $green $blue $lavender 37deg";
+        "col.inactive_border" = "$surface0";
       };
 
       decoration = {
