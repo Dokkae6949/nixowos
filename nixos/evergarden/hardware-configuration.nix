@@ -32,32 +32,6 @@
     extraModulePackages = [];
     blacklistedKernelModules = [ "pn533" "pn533_usb" "nfc" ];
   };
-
-  fileSystems."/" = {
-    device = "/dev/disk/by-label/nixos";
-    fsType = "ext4";
-  };
-
-  fileSystems."/boot" = {
-    device = "/dev/disk/by-uuid/8378-93D9";
-    fsType = "vfat";
-  };
-
-  fileSystems."/mnt/win11" = {
-    device = "/dev/disk/by-uuid/01DA89DC69F0F360";
-    options = ["uid=1000" "gid=1000" "dmask=007" "fmask=117"];
-  };
-  
-  fileSystems."/mnt/win10" = {
-    device = "/dev/disk/by-uuid/A442475C4247327A";
-    options = ["uid=1000" "gid=1000" "dmask=007" "fmask=117"];
-  };
-
-  swapDevices = [
-    { device = "/var/swapfile";
-      size = (1024 * 64) + (1024 * 2); # RAM size + 2GB
-    }
-  ];
   
   networking.useDHCP = lib.mkDefault true;
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";

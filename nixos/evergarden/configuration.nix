@@ -9,13 +9,13 @@
 
 {
   imports = [
-    # If you want to use modules your own flake exports (from modules/nixos):
+    inputs.disko.nixosModules.disko
+
     outputs.nixosModules.storage-optimization
 
-    # Import extra configuration files
     ./configuration
 
-    # Import generated (nixos-generate-config) hardware configuration
+    ./disk-configuration.nix
     ./hardware-configuration.nix
   ];
 

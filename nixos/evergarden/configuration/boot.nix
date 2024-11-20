@@ -3,13 +3,12 @@
 {
   boot = {
     loader = {
-      efi.canTouchEfiVariables = true;
-
       grub = {
         enable = true;
         useOSProber = true;
         device = "nodev";
         efiSupport = true;
+        efiInstallAsRemovable = true;
         default = "saved";
       };
     };
