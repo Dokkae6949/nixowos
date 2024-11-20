@@ -1,7 +1,7 @@
 { ... }:
 
 let
- scripts = "~/Nix/home-manager/evergarden/kurisu/configuration/hypr/resources/scripts";
+ scripts = ./resources/scripts;
 in
 {
   wayland.windowManager.hyprland = {
@@ -67,10 +67,13 @@ in
 
       decoration = {
         rounding = 12;
-        drop_shadow = true;
-        shadow_range = 20;
-        shadow_render_power = 2;
-        "col.shadow" = "$crust";
+
+        shadow = {
+          enabled = false;
+          range = 20;
+          render_power = 2;
+          color = "$crust";
+        };
 
         blur = {
           enabled = true;

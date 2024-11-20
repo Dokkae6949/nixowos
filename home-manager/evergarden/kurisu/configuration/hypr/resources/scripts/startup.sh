@@ -15,9 +15,6 @@ function cleanup() {
   rm -rf ~/.cache/swww/
 
   if_process_exists swww "swww kill"
-  if_process_exists waybar "pkill waybar"
-  if_process_exists dunst "pkill dunst"
-  if_process_exists swaync "pkill swaync"
 }
 
 # init
@@ -27,9 +24,6 @@ swww img --transition-step 255 --transition-fps 60 --transition-duration 1 $wall
 
 # waybar &
 ags &
-
-# dunst &
-swaync &
 
 wl-paste --type text --watch cliphist store & #Stores only text data
 wl-paste --type image --watch cliphist store & #Stores only image data

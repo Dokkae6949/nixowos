@@ -1,7 +1,7 @@
 { pkgs, ... }:
 
 {
-  home.gtk = {
+  gtk = {
     enable = true;
 
     theme = {

@@ -10,6 +10,7 @@ in
 
     ./hyprland.nix
     ./hyprlock.nix
+    ./gtk.nix
   ];
 
   home = {
