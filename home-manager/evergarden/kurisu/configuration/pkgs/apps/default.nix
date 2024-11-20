@@ -30,7 +30,6 @@
     tor-browser-bundle-bin
     ani-cli
     _2048-in-terminal
-    inputs.catppuccinifier.packages.${system}.cli
 
     # kicad
 
@@ -52,9 +51,9 @@
     mangohud
 
     godot_4
-    # godot4-mono
+    #godot4-mono
     krita
-    pkgs.master.aseprite
+    #pkgs.master.aseprite
     ldtk
 #    (blender.override {
 #      cudaSupport = true;
