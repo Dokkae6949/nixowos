@@ -41,11 +41,9 @@ in
       hyprlock
       hyprpanel
 
-      wofi
       tofi
       swww
-      dunst
-      swaynotificationcenter
+      jq
 
       playerctl
       brightnessctl
@@ -53,7 +51,6 @@ in
       wl-clipboard
       grim
       libnotify
-      wallust
     ];
   };
 }
