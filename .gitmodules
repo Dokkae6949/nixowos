@@ -1,6 +1,7 @@
 [submodule "nixos/evergarden/secrets"]
 	path = nixos/evergarden/secrets
-	url = git@github.com:Dokkae6949/nixowos-secrets.git
+  url = git@github.com:Dokkae6949/nixowos-secrets.git
+  branch = main
 [submodule "pkgs/nixvim"]
 	path = pkgs/nixvim
 	url = https://github.com/Dokkae6949/nixvim.git
