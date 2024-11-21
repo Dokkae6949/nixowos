@@ -3,7 +3,7 @@
 }:
 
 {
-  boot.initrd.postDeviceCommands = lib.mkAdter ''
+  boot.initrd.postDeviceCommands = lib.mkAfter ''
     mkdir /btrfs_tmp
     mount /dev/nvme0n1p3 /btrfs_tmp
     if [[ -e /btrfs_tmp/root ]]; then
@@ -26,7 +26,6 @@
 
     btrfs subvolume create /btrfs_tmp/root
     umount /btrfs_tmp
-    rmdir /btrfs_tmp
   '';
 
   disko.devices = {
