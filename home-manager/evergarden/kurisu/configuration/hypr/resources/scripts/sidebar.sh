@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-STATES_PATH=/tmp/ags/state.json
+STATES_PATH=~/.cache/ags/state.json
 
 case $1 in
   toggle)
