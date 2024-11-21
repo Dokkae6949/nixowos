@@ -873,6 +873,21 @@
         "type": "github"
       }
     },
+    "impermanence": {
+      "locked": {
+        "lastModified": 1731242966,
+        "narHash": "sha256-B3C3JLbGw0FtLSWCjBxU961gLNv+BOOBC6WvstKLYMw=",
+        "owner": "nix-community",
+        "repo": "impermanence",
+        "rev": "3ed3f0eaae9fcc0a8331e77e9319c8a4abd8a71a",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "repo": "impermanence",
+        "type": "github"
+      }
+    },
     "libgit2": {
       "flake": false,
       "locked": {
@@ -1503,6 +1518,7 @@
         "home-manager": "home-manager",
         "hyprland": "hyprland",
         "hyprpanel": "hyprpanel",
+        "impermanence": "impermanence",
         "nix-index-database": [
           "nixpkgs"
         ],
