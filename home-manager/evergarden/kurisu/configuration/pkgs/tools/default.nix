@@ -43,6 +43,7 @@
     insomnia
     # burpsuite-fixed
     gh
+    fzf
     arp-scan
     graphviz
     networkmanagerapplet
