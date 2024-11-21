@@ -105,5 +105,6 @@
     # /, /nix/, /nix/store, /var, /var/log, /var/lib, /var/lib/nixos, /etc, /usr
     # are all automatically mounted marked as needed for boot.
     "/persist".neededForBoot = true;
+    "/home".neededForBoot = true;
   };
 }
