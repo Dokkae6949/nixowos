@@ -9,5 +9,6 @@
 
     ./android.nix
     ./dotnet.nix
+    ./impermanence.nix
   ];
 }

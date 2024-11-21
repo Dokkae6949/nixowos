@@ -22,6 +22,7 @@
     ./fonts.nix
     ./i18n.nix
     ./sops.nix
+    ./impermanence.nix
 
     ./hyprland.nix
     ./fish.nix
