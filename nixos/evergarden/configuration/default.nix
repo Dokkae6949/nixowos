@@ -23,6 +23,7 @@
     ./i18n.nix
     ./sops.nix
     ./impermanence.nix
+    ./sudo.nix
 
     ./hyprland.nix
     ./fish.nix

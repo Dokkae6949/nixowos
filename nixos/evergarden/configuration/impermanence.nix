@@ -16,7 +16,6 @@
     ];
     files = [
       "/etc/machine-id"
-      "/etc/sudoers"
     ];
   };
 }
