@@ -5,7 +5,7 @@
 
 let
   combinedDotnet = dotnetCorePackages.combinePackages [
-    dotnetCorePackages.sdk_7_0
+    # dotnetCorePackages.sdk_7_0
     dotnetCorePackages.sdk_8_0
     dotnetCorePackages.sdk_9_0
   ];

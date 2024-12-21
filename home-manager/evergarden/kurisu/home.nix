@@ -25,6 +25,9 @@
 
     config = {
       allowUnfree = true;
+      permittedInsecurePackages = [
+        "dotnet-sdk-7.0.410"
+      ];
     };
   };
 

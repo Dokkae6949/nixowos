@@ -12,7 +12,7 @@
     # });
 
     pcsc-patched-dotnet = (prev.dotnetCorePackages.combinePackages [
-      prev.dotnetCorePackages.sdk_7_0
+      # prev.dotnetCorePackages.sdk_7_0
       prev.dotnetCorePackages.sdk_8_0
       prev.dotnetCorePackages.sdk_9_0
     ]).overrideAttrs (oldAttrs: {
@@ -35,14 +35,24 @@
   stable-packages = final: _prev: {
     stable = import inputs.nixpkgs-stable {
       system = final.system;
-      config.allowUnfree = true;
+      config = {
+        allowUnfree = true;
+        permittedInsecurePackages = [
+          "dotnet-sdk-7.0.410"
+        ];
+      };
     };
   };
 
   master-packages = final: _prev: {
     master = import inputs.nixpkgs-master {
       system = final.system;
-      config.allowUnfree = true;
+      config = {
+        allowUnfree = true;
+        permittedInsecurePackages = [
+          "dotnet-sdk-7.0.410"
+        ];
+      };
     };
   };
 }
