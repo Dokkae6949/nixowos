@@ -10,5 +10,7 @@
     ./audio.nix
     ./communication.nix
     ./hacking.nix
+    ./editor.nix
+    ./browser.nix
   ];
 }

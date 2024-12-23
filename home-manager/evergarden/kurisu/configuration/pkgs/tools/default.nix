@@ -5,7 +5,7 @@
     ./git
     ./eza
     ./neovim
-    ./helix
+    # ./helix
     ./zoxide
     ./zellij
     ./imv

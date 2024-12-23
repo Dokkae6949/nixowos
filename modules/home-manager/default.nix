@@ -4,4 +4,6 @@
   audio = import ./audio;
   communication = import ./communication;
   hacking = import ./hacking;
+  editor = import ./editor;
+  browser = import ./browser;
 }

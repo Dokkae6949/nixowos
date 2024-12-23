@@ -18,9 +18,9 @@
   services.easyeffects.enable = true;
 
   home.packages = with pkgs; [
-    inputs.zen-browser.packages."${system}".default
-    firefox
-    google-chrome
+    # inputs.zen-browser.packages."${system}".default
+    # firefox
+    # google-chrome
     gimp
     figma-linux
     onlyoffice-bin
