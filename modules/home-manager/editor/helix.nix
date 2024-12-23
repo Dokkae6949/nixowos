@@ -65,7 +65,11 @@ in
           editor = {
             idle-timeout = 0;
             line-number = "relative";
-            indent-guides = true;
+          };
+
+          editor.indent-guides = {
+            render = true;
+            character = "╎";
           };
         } // cfg.extraSettings;
 
