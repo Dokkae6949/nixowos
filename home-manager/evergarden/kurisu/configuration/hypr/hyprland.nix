@@ -140,8 +140,8 @@ in
         "opacity 0.8 0.8,class:(.*)"
 
         "workspace 2 silent,class:(firefox)"
-        "workspace 2 silent,class:(zen)"
-        "workspace 3 silent,class:(jetbrains)"
+        "workspace 2 silent,class:(^.*zen.*$)"
+        "workspace 3 silent,class:(^.*jetbrains.*$)"
         "workspace 4 silent,class:(Godot)"
         "workspace 5 silent,class:(DesktopEditors)"
         "workspace 6 silent,class:(Aseprite)"
