@@ -9,8 +9,9 @@
         useOSProber = true;
         device = "nodev";
         efiSupport = true;
-        #efiInstallAsRemovable = true;
+        # efiInstallAsRemovable = true;
         default = "saved";
+        # gfxmodeEfi = "1920x1200";
       };
     };
 
