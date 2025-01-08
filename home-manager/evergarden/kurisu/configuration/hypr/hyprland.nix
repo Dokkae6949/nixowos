@@ -197,7 +197,7 @@ in
         "$altMod, V, exec, cliphist list | tofi | cliphist decode | wl-copy"
         "$mainMod, R, exec, hyprpicker -a"
         "$mainMod SHIFT, S, exec, grimblast --notify --freeze copy area"
-        "$mainMod CTRL, S, exec, grimblast --notify --freeze save area"
+        "$mainMod CTRL, S, exec, grimblast --notify --freeze save area \"$HOME/Pictures/screenshots/$(date --iso-8601='ns').png\""
         "$mainMod SHIFT, up, exec, ${scripts}/spotify-volume.sh up"
         "$mainMod SHIFT, down, exec, ${scripts}/spotify-volume.sh down"
 
