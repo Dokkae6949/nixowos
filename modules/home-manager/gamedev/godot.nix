@@ -15,8 +15,8 @@ in
 
   config = lib.mkIf cfg.enable {
     home.packages = with pkgs; [
-      godot4
-      godot4-mono
+      godot_4
+      godot_4-mono
     ];
   };
 }
