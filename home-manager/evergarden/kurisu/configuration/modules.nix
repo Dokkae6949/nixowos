@@ -17,7 +17,7 @@
       spotify = {
         enable = true;
         spicetify.enable = true;
-      }
+      };
     };
 
     browser = {
