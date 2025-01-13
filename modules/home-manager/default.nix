@@ -6,4 +6,5 @@
   hacking = import ./hacking;
   editor = import ./editor;
   browser = import ./browser;
+  gamedev = import ./gamedev;
 }

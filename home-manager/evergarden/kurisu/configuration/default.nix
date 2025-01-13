@@ -5,8 +5,8 @@
   imports = [
     ./hypr
     ./pkgs
-    ./modules
-
+    
+    ./modules.nix
     ./android.nix
     ./dotnet.nix
     # ./impermanence.nix
