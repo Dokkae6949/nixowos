@@ -34,7 +34,7 @@
 
     hacking = {
       binary.enable = true;
-      forensics.enable = true;
+      forensic.enable = true;
       net.enable = true;
       web.enable = true;
     };
