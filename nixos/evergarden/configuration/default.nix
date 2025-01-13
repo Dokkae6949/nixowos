@@ -33,5 +33,6 @@
     ./docker.nix
     ./steam.nix
     ./pcsc.nix
+    ./nh.nix
   ];
 }
