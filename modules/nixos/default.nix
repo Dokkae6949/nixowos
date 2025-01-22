@@ -2,4 +2,5 @@
 # These should be stuff you would like to share with others, not your personal configurations.
 {
   storage-optimization = import ./storage-optimization.nix;
+  kvmfr = import ./kvmfr-options.nix;
 }

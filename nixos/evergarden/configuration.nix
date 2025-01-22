@@ -1,10 +1,9 @@
-{
-  inputs,
-  outputs,
-  lib,
-  config,
-  pkgs,
-  ...
+{ inputs
+, outputs
+, lib
+, config
+, pkgs
+, ...
 }: 
 
 {
@@ -12,6 +11,7 @@
     inputs.disko.nixosModules.disko
 
     outputs.nixosModules.storage-optimization
+    outputs.nixosModules.kvmfr
 
     ./configuration
 
@@ -37,6 +37,18 @@
 
   uwu = {
     nix.storage-optimization.enable = true;
+    virtualization.kvmfr = {
+      enable = true;
+
+      shm = {
+        enable = true;
+
+        size = 128;
+        user = "kurisu";
+        group = "libvirtd";
+        mode = "0600";
+      };
+    };
   };
 
   nix = let
