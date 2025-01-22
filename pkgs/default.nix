@@ -6,5 +6,4 @@ pkgs: {
   pcsc-dotnet = pkgs.callPackage ./pcsc-dotnet.nix { };
   burpsuite-fixed = pkgs.callPackage ./burpsuite/default.nix { };
   sqldeveloper-latest = pkgs.callPackage ./sqldeveloper-latest.nix { };
-  kvmfr = pkgs.callPackage ./kvmfr-package.nix { };
 }
