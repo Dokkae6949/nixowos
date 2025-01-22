@@ -63,7 +63,8 @@
       package32 = lib.mkDefault pkgs.pkgsi686Linux.mesa.drivers;
 
       extraPackages = with pkgs; [
-        vaapiVdpau
+        # vaapiVdpau
+        nvidia-vaapi-driver
         libvdpau-va-gl
         pkgs.master.amdvlk
       ];
