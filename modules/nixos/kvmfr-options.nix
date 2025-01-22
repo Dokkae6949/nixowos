@@ -40,7 +40,7 @@ in
 
   config = mkIf cfg.enable {
     boot.extraModulePackages = with config.boot.kernelPackages; [
-      (pkgs.callPackage ./kvmfr-package.nix { inherit kernel; })
+      pkgs.kvmfr
     ];
     boot.initrd.kernelModules = [ "kvmfr" ];
 
