@@ -27,7 +27,6 @@ in
           "audio"
           "plugdev"
           "adbusers"
-          "libbirtd"
           "wireshark"
           "keyd"
         ];
