@@ -25,6 +25,8 @@ in
       XCURSOR_THEME = cursor-theme-name;
       HYPRCURSOR_THEME = cursor-theme-name;
       HYPRCURSOR_SIZE = 24;
+
+      AQ_DRM_DEVICES = "/dev/dri/card0:/dev/dri/card1";
     };
 
     pointerCursor = {
