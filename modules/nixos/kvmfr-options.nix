@@ -9,7 +9,7 @@ let
   cfg = config.uwu.virtualisation.kvmfr;
 in
 {
-  options.virtualisation.kvmfr = {
+  options.uwu.virtualisation.kvmfr = {
     enable = mkEnableOption "Kvmfr";
 
     shm = {

@@ -37,7 +37,8 @@
 
   uwu = {
     nix.storage-optimization.enable = true;
-    virtualization.kvmfr = {
+
+    virtualisation.kvmfr = {
       enable = true;
 
       shm = {
