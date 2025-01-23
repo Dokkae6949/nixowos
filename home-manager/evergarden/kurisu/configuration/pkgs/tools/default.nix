@@ -31,6 +31,7 @@
     nodejs_18
     makeWrapper
     sassc
+    nvtopPackages.full
     
     zip
     inputs.ext.packages."${system}".ext

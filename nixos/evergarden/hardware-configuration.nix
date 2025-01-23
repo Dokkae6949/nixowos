@@ -36,7 +36,7 @@
   networking.useDHCP = lib.mkDefault true;
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
 
-  services.xserver.videoDrivers = lib.mkDefault ["nvidia" "modesetting"];
+  services.xserver.videoDrivers = lib.mkDefault ["amdgpu" "nvidia" "modesetting"];
 
   hardware = {
     nvidia = {
