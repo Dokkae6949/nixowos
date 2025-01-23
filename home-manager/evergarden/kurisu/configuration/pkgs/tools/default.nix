@@ -32,6 +32,7 @@
     makeWrapper
     sassc
     nvtopPackages.full
+    psmisc
     
     zip
     inputs.ext.packages."${system}".ext

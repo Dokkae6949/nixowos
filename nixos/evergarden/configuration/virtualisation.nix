@@ -14,7 +14,7 @@ in
   boot = {
     kernelModules = [ "kvm-${platform}" "vfio_virqfd" "vfio_pci" "vfio_iommu_type1" "vfio" ];
     kernelParams = [ "${platform}_iommu=on" "${platform}_iommu=pt" "kvm.ignore_msrs=1" ];
-    # extraModprobeConfig = "options vfio-pci ids=${builtins.concatStringsSep "," vfioIds}";
+    extraModprobeConfig = "options vfio-pci ids=${builtins.concatStringsSep "," vfioIds}";
   };
 
   # Add a file for looking-glass to use later. This will allow for viewing the guest VM's screen in a
