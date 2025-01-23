@@ -27,6 +27,8 @@ in
       HYPRCURSOR_THEME = cursor-theme-name;
       HYPRCURSOR_SIZE = 24;
 
+      # This needs to be set in the hyprland config as it would be initialized
+      # too late otherwise.
       # AQ_DRM_DEVICES = "/dev/dri/card0:/dev/dri/card1";
       AQ_DRM_DEVICES = "/dev/dri/card0";
     };
