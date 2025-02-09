@@ -12,6 +12,8 @@
   ];
 
   home.packages = with pkgs; [
+    jujutsu
+  
 #    gcc
     clang
     cmake

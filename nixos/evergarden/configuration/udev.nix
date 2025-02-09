@@ -23,6 +23,9 @@
     extraRules = ''
       # This will allow my Pico 4 VR headset to work via ADB
       SUBSYSTEM=="usb", ATTR{idVendor}=="2d40", ATTR{idProduct}=="00b7", MODE="0666", GROUP="plugdev"
+
+      # This will prevent the logitech usb mouse receiver from waking the computer from sleep
+      ACTION=="add", ATTRS{idVendor}=="046d", ATTRS{idProduct}=="c547", ATTR{power/wakeup}="disabled"
     '';
   };
 }
