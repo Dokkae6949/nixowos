@@ -45,7 +45,7 @@ in
     packages = with pkgs; [
       hyprpicker
       hyprlock
-      hyprpanel
+      # hyprpanel
 
       tofi
       swww

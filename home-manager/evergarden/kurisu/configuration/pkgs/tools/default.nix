@@ -4,7 +4,7 @@
   imports = [
     ./git
     ./eza
-    ./neovim
+    # ./neovim
     # ./helix
     ./zoxide
     ./zellij

@@ -28,6 +28,10 @@
       '';
     });
 
+    # Temporary fix for: https://github.com/NixOS/nixpkgs/issues/380196
+    lldb = prev.lldb.overrideAttrs {
+      dontCheckForBrokenSymlinks = true;
+    };
   };
 
   # When applied, the unstable nixpkgs set (declared in the flake inputs) will

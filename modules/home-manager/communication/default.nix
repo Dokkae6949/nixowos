@@ -4,6 +4,6 @@
 {
   imports = [
     ./mail.nix
-    ./vencord.nix
+    ./vesktop.nix
   ];
 }
