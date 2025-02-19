@@ -20,7 +20,7 @@ in
   };
 
   services.greetd = {
-    enable = false;
+    enable = true;
     vt = 1;
     settings = {
       default_session = {

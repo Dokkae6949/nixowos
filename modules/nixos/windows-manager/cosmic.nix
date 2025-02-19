@@ -11,7 +11,7 @@ in
   imports = [
     inputs.nixos-cosmic.nixosModules.default
   ];
-  
+
   options.uwu.window-manager.cosmic = {
     enable = lib.mkEnableOption "Whether to enable the cosmic window manager";
   };
@@ -22,9 +22,7 @@ in
       trusted-public-keys = [ "cosmic.cachix.org-1:Dya9IyXD4xdBehWjrkPv6rtxpmMdRel02smYzA85dPE=" ];
     };
 
-    services.displayManager = {
-      cosmic.enable = true;
-      cosmic-greeter.enable = true;
-    };
+    services.desktopManager.cosmic.enable = true;
+    services.displayManager.cosmic-greeter.enable = true;
   };
 }
