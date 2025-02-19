@@ -36,6 +36,10 @@
 
   uwu = {
     nix.storage-optimization.enable = true;
+
+    window-manager = {
+      cosmic.enable = true;
+    };
   };
 
   nix = let

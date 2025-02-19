@@ -35,6 +35,8 @@
       follows = "nixpkgs";
     };
 
+    nixos-cosmic.url = "github:lilyinstarlight/nixos-cosmic";
+
     ags = {
       url = "github:Aylur/ags?ref=v1";
       inputs.nixpkgs.follows = "nixpkgs";
