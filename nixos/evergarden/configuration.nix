@@ -11,6 +11,7 @@
     inputs.disko.nixosModules.disko
 
     outputs.nixosModules.storage-optimization
+    outputs.nixosModules.window-manager
 
     ./configuration
 
