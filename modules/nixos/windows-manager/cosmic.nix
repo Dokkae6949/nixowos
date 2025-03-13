@@ -24,5 +24,6 @@ in
 
     services.desktopManager.cosmic.enable = true;
     services.displayManager.cosmic-greeter.enable = true;
+    services.tlp.enable = lib.mkForce false;
   };
 }

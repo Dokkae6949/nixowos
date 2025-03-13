@@ -34,6 +34,7 @@
     # kicad
 
     vscode
+    ida-free
 
     # sqldeveloper
     # zed-editor
@@ -43,6 +44,7 @@
     (jetbrains.plugins.addPlugins jetbrains.webstorm [ "github-copilot" ])
     (jetbrains.plugins.addPlugins jetbrains.rust-rover [ "github-copilot" ])
     (jetbrains.plugins.addPlugins jetbrains.rider [ "github-copilot" ])
+    (jetbrains.plugins.addPlugins jetbrains.clion [ "github-copilot" ])
     jetbrains.datagrip
     
     picocom

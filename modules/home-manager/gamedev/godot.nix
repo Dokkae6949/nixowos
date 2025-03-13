@@ -1,7 +1,6 @@
 { lib
 , config
 , pkgs
-, inputs
 , ...
 }:
 
@@ -14,7 +13,7 @@ in
   };
 
   config = lib.mkIf cfg.enable {
-    home.packages = with pkgs; [
+    home.packages = with pkgs.master; [
       godot_4
       # godot_4-mono
     ];

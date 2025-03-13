@@ -7,7 +7,7 @@
     ./boot.nix
     ./users.nix
     ./time.nix
-    # ./greetd.nix
+    ./greetd.nix
     ./logind.nix
     ./security.nix
     ./networking.nix

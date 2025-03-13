@@ -11,7 +11,6 @@
     inputs.disko.nixosModules.disko
 
     outputs.nixosModules.storage-optimization
-    outputs.nixosModules.window-manager
 
     ./configuration
 
@@ -37,10 +36,6 @@
 
   uwu = {
     nix.storage-optimization.enable = true;
-
-    window-manager = {
-      cosmic.enable = true;
-    };
   };
 
   nix = let
