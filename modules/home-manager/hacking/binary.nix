@@ -19,7 +19,8 @@ in
 
       ghidra
       gdb
-      pwndbg
+      # Outdated. Use the pwndbg flake
+      # pwndbg
       hexedit
       file
     ];

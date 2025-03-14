@@ -34,5 +34,6 @@
     ./steam.nix
     ./pcsc.nix
     ./nh.nix
+    ./wireshark.nix
   ];
 }
