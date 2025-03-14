@@ -16,6 +16,7 @@ in
     home.packages = with pkgs; [
       nmap
       netcat
+      wireshark
       socat
       tcpdump
     ];
