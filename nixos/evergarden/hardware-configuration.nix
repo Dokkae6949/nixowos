@@ -28,7 +28,7 @@
       ];
     };
 
-    kernelModules = ["kvm-amd"];
+    kernelModules = ["kvm-amd" "fuse"];
     extraModulePackages = [];
     blacklistedKernelModules = [ "pn533" "pn533_usb" "nfc" ];
   };

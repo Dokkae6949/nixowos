@@ -19,6 +19,7 @@ in
       wireshark
       socat
       tcpdump
+      snort2
     ];
   };
 }
