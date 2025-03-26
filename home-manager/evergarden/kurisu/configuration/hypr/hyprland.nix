@@ -161,6 +161,7 @@ in
         "fullscreen,class:^(cs2)$"
         "float,class:^(bevy)"
         "center,class:^(bevy)"
+        "float,title:^(Android Emulator)"
         # "forceinput,class:(jetbrains)"
         # "windowdance,class:(jetbrains)"
         # "stayfocused,class:(jetbrains)"
@@ -183,6 +184,7 @@ in
         "ignorezero,launcher"
         "blur,swaync.*"
         "ignorealpha 0.8,swaync.*"
+        "ignorealpha 0.8,^(Android Emulator).*"
       ];
 
       bind = [
