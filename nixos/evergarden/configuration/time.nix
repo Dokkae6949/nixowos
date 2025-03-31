@@ -4,7 +4,7 @@
 
 {
   time.timeZone = lib.mkDefault "Europe/Vienna";
-  time.hardwareClockInLocalTime = true;
+  time.hardwareClockInLocalTime = false;
   services.automatic-timezoned.enable = true;
   services.tzupdate.enable = true;
 }

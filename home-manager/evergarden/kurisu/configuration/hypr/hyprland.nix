@@ -145,7 +145,8 @@ in
 
         "workspace 2 silent,class:(^.*firefox.*$)"
         "workspace 2 silent,class:(^.*zen.*$)"
-        "workspace 3 silent,class:(^.*jetbrains.*$)"
+        # "workspace 3 silent,class:(^.*jetbrains.*$)"
+        "workspace 3 silent,class:(^.*jetbrains.*$),title:^(?!win).*"
         "workspace 4 silent,class:(^.*Godot.*$)"
         "workspace 5 silent,class:(^.*DesktopEditors.*$)"
         "workspace 6 silent,class:(^.*Aseprite.*$)"
@@ -184,7 +185,6 @@ in
         "ignorezero,launcher"
         "blur,swaync.*"
         "ignorealpha 0.8,swaync.*"
-        "ignorealpha 0.8,^(Android Emulator).*"
       ];
 
       bind = [
