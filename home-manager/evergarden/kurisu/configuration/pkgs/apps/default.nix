@@ -57,9 +57,10 @@
     krita
     #pkgs.master.aseprite
     ldtk
-#    (blender.override {
-#      cudaSupport = true;
-#    })
+    blockbench
+   (blender.override {
+     cudaSupport = true;
+   })
 
     cava
     hyfetch
