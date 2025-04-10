@@ -29,6 +29,7 @@ in
           "adbusers"
           "wireshark"
           "keyd"
+          "kvm"
         ];
         shell = pkgs.fish;
       };

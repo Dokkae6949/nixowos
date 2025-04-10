@@ -163,6 +163,12 @@ in
         "float,class:^(bevy)"
         "center,class:^(bevy)"
         "float,title:^(Android Emulator)"
+
+        # "float,title:(\(DEBUG\))$"
+        # "float,initialTitle:^(Godot)$"
+        # "float,class:Godot"
+        "tile,title:Godot"
+        
         # "forceinput,class:(jetbrains)"
         # "windowdance,class:(jetbrains)"
         # "stayfocused,class:(jetbrains)"
@@ -170,7 +176,6 @@ in
         "center,title:(Move),class:(jetbrains)"
         # "forceinput,title:Godot"
         # "windowdance,title:Godot"
-        "tile,title:Godot"
         "nofocus,class:^ghidra-.+$,title:^win.+$,floating:1,fullscreen:0"
       ];
 
