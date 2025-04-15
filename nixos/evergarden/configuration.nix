@@ -35,7 +35,7 @@
   };
 
   uwu = {
-    nix.storage-optimization.enable = true;
+    nix.storage-optimization.enable = false;
   };
 
   nix = let
