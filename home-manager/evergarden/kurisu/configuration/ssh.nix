@@ -11,7 +11,7 @@
       };
 
       kdad = {
-        hostname = "194.182.186.234";
+        hostname = "194.182.186.105";
         identitiesOnly = true;
         user = "debian";
         identityFile = "~/.ssh/kdad_team";
