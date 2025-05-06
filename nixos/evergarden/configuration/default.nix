@@ -29,7 +29,7 @@
     ./fish.nix
     ./mongodb.nix
     ./postgresql.nix
-    # ./virtualisation.nix
+    ./virtualisation.nix
     ./docker.nix
     ./steam.nix
     ./pcsc.nix

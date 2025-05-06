@@ -3,6 +3,10 @@
 {
   console.useXkbConfig = true;
 
+  programs.ydotool = {
+    enable = true;
+  };
+
   services = {
     xserver = {
       xkb = {

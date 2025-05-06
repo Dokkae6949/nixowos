@@ -30,6 +30,7 @@ in
           "wireshark"
           "keyd"
           "kvm"
+          "ydotool"
         ];
         shell = pkgs.fish;
       };
