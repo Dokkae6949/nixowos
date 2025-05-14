@@ -53,6 +53,9 @@ in
           sensitivity = -0.4;
           accel_profile = "flat";
         }
+        { name = "ydotoold-virtual-device";
+          kb_layout = "at";
+        }
       ];
 
       debug = {
