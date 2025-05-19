@@ -30,7 +30,7 @@
     # python311Packages.conda
     python311Packages.pip
     openjdk17
-    nodejs_18
+    # nodejs_18
     makeWrapper
     sassc
     nvtopPackages.full
