@@ -34,17 +34,18 @@
     # kicad
 
     vscode
-    ida-free
+    # ida-free
 
     # sqldeveloper
     # zed-editor
     # ciscoPacketTracer8
     android-studio
-    (jetbrains.plugins.addPlugins jetbrains.idea-ultimate [ "github-copilot" ])
-    (jetbrains.plugins.addPlugins jetbrains.webstorm [ "github-copilot" ])
-    (jetbrains.plugins.addPlugins jetbrains.rust-rover [ "github-copilot" ])
-    (jetbrains.plugins.addPlugins jetbrains.rider [ "github-copilot" ])
-    (jetbrains.plugins.addPlugins jetbrains.clion [ "github-copilot" ])
+    # "github-copilot"
+    (jetbrains.plugins.addPlugins jetbrains.idea-ultimate [])
+    (jetbrains.plugins.addPlugins jetbrains.webstorm [])
+    (jetbrains.plugins.addPlugins jetbrains.rust-rover [])
+    (jetbrains.plugins.addPlugins jetbrains.rider [])
+    (jetbrains.plugins.addPlugins jetbrains.clion [])
     jetbrains.datagrip
     
     picocom

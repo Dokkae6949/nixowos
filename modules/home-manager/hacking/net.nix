@@ -19,7 +19,8 @@ in
       wireshark
       socat
       tcpdump
-      snort2
+      # Deprecated
+      # snort2
     ];
   };
 }
